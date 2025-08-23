@@ -1,51 +1,43 @@
 export default function Footer() {
   return (
-    <footer className="border-t bg-white">
-      <div className="container mx-auto max-w-6xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} Voltgo — Todos los derechos reservados
+    <footer className="border-t bg-gray-800 text-white py-6">
+      <div className="container mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        {/* Copyright */}
+        <p className="text-sm">
+          © {new Date().getFullYear()} VoltGo – Todos los derechos reservados
         </p>
 
-        <nav className="flex items-center gap-5 text-sm">
-          <a href="#services" className="hover:text-blue-600">Servicios</a>
-          <a href="#how" className="hover:text-blue-600">Cómo funciona</a>
-          <a href="#contact" className="hover:text-blue-600">Contacto</a>
+        {/* Links de navegación */}
+        <nav className="flex gap-6 text-sm">
+          <a className="hover:text-blue-400" href="#services">
+            Servicios
+          </a>
+          <a className="hover:text-blue-400" href="#how">
+            Cómo funciona
+          </a>
+          <a className="hover:text-blue-400" href="#contact">
+            Contacto
+          </a>
         </nav>
 
-        <div className="flex items-center gap-4">
+        {/* Redes sociales */}
+        <div className="flex gap-4 text-sm">
           <a
             href="https://instagram.com"
             target="_blank"
-            rel="noreferrer"
-            className="hover:text-pink-600"
-            aria-label="Instagram"
+            rel="noopener noreferrer"
+            className="hover:text-pink-400"
           >
-            IG
+            Instagram
           </a>
           <a
             href="https://facebook.com"
             target="_blank"
-            rel="noreferrer"
-            className="hover:text-blue-600"
-            aria-label="Facebook"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500"
           >
-            FB
-          </a>
-          <a
-            href="https://x.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-gray-800"
-            aria-label="X"
-          >
-            X
-          </a>
-          <a
-            href="mailto:soporte@voltgo.com"
-            className="hover:text-green-600"
-            aria-label="Email"
-          >
-            Email
+            Facebook
           </a>
         </div>
       </div>

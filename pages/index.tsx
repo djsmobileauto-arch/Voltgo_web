@@ -19,9 +19,11 @@ export default function Home() {
 
       {/* Servicios */}
       <section id="services" className="p-12 bg-white">
-        <h2 className="text-2xl font-semibold text-center mb-6">Nuestros Servicios</h2>
+        <h2 className="text-2xl font-semibold text-center mb-6">
+          Nuestros Servicios
+        </h2>
         <ul className="grid md:grid-cols-3 gap-6 text-gray-700">
-          <li className="border p-4 rounded shadow">Cambio de llanta</li>
+          <li className="border p-4 rounded shadow">Cambio de llantas</li>
           <li className="border p-4 rounded shadow">Arranque de batería</li>
           <li className="border p-4 rounded shadow">Entrega de combustible</li>
           <li className="border p-4 rounded shadow">Carga de emergencia para EV</li>

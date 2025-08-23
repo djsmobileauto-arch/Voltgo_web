@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ====== ESTILOS GLOBALES VOLTGO ====== */
+/* ===== ESTILOS GLOBALES VOLTGO ===== */
 html, body {
   font-family: 'Inter', sans-serif;
   background-color: #f9fafb; /* gris claro de fondo */
@@ -12,7 +12,7 @@ html, body {
 
 /* Colores corporativos */
 :root {
-  --voltgo-blue: #2563eb; /* azul eléctrico */
+  --voltgo-blue: #2563eb;     /* azul eléctrico */
   --voltgo-blue-dark: #1e40af;
   --voltgo-gray: #f3f4f6;
 }
@@ -35,5 +35,5 @@ button:hover {
 
 /* Secciones */
 section {
-  scroll-margin-top: 80px; /* compensa el Header fijo */
+  scroll-margin-top: 80px; /* compensa el header fijo */
 }

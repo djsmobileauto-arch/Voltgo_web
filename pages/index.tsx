@@ -3,12 +3,12 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100">
+    <main className="min-h-screen bg-[var(--volt-gray)]">
       <Header />
 
       {/* Hero */}
       <section className="p-12 text-center">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">
+        <h1 className="text-4xl font-bold text-[var(--volt-primary)] mb-4">
           Welcome to VoltGo!
         </h1>
         <p className="text-gray-700 max-w-2xl mx-auto">
@@ -18,20 +18,23 @@ export default function Home() {
 
       {/* Services */}
       <section id="services" className="p-12 bg-white">
-        <h2 className="text-2xl font-semibold text-center mb-6">Our Services</h2>
+        <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--volt-dark)]">
+          Our Services
+        </h2>
         <ul className="grid md:grid-cols-3 gap-6 text-gray-700">
           <li className="border p-4 rounded shadow">Tire change</li>
           <li className="border p-4 rounded shadow">Battery jump-start</li>
           <li className="border p-4 rounded shadow">Fuel delivery</li>
           <li className="border p-4 rounded shadow">Emergency EV charge</li>
           <li className="border p-4 rounded shadow">Lockout service</li>
-          <li className="border p-4 rounded shadow">Light towing (dispatch)</li>
+          {/* Removed: Light towing (dispatch). Add another or keep 5 items */}
+          <li className="border p-4 rounded shadow">On-site diagnostics</li>
         </ul>
       </section>
 
       {/* How it works */}
       <section id="how" className="p-12 text-center bg-gray-50">
-        <h2 className="text-2xl font-semibold mb-6">How it works</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-[var(--volt-dark)]">How it works</h2>
         <div className="grid md:grid-cols-3 gap-6 text-gray-700">
           <div className="border p-4 rounded shadow">
             <h3 className="font-bold mb-2">1. Request help</h3>
@@ -50,7 +53,9 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" className="p-12 bg-white">
-        <h2 className="text-2xl font-semibold text-center mb-6">Contact us</h2>
+        <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--volt-dark)]">
+          Contact us
+        </h2>
         <form className="max-w-xl mx-auto space-y-4">
           <input
             type="text"
@@ -69,7 +74,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[var(--volt-primary)] text-white px-4 py-2 rounded hover:brightness-95"
           >
             Send
           </button>

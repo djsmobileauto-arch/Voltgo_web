@@ -1,15 +1,5 @@
 export default function Home() {
-  const COLORS = {
-    blue: "#0a3ccf",
-    green: "#15c26b",
-  };
-
-  const CONTACT = {
-    email: "info@voltgo.us",
-    phonePretty: "1-833-4-VOLTGO (833-486-5846)",
-    phoneE164: "+18334865846",
-    city: "Wallingford, CT",
-  };
+  const COLORS = { blue: "#0a3ccf", green: "#15c26b" };
 
   return (
     <main className="min-h-screen flex flex-col bg-white">
@@ -22,35 +12,40 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
           Mobile EV Charging & Roadside Assistance
         </h1>
-
         <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
           Fast, safe and reliable EV charging wherever you need it.
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+          {/* Primario: EMERGENCIA */}
           <a
-            href="#contact"
+            href="tel:+18334865846"
             className="px-6 py-3 rounded-2xl font-semibold text-white"
             style={{ backgroundColor: COLORS.green }}
           >
-            Request Service
+            Emergency Help Now
           </a>
+          {/* Secundario: solicitud online */}
           <a
-            href="#services"
+            href="/request"
             className="px-6 py-3 rounded-2xl font-semibold"
             style={{ border: `2px solid ${COLORS.green}`, color: COLORS.green, backgroundColor: "transparent" }}
           >
-            How it works
+            Schedule a Charge
+          </a>
+          {/* Tercero: suscripciones (suave) */}
+          <a href="/subscribe" className="text-sm underline opacity-90">
+            Membership plans
           </a>
         </div>
       </section>
 
-      {/* SERVICES / PILLARS */}
+      {/* Services / Pillars (lo que ya tenías) */}
       <section id="services" className="px-4 py-14">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-extrabold text-center tracking-tight">Services</h2>
           <p className="mt-3 text-center text-slate-600 max-w-2xl mx-auto">
-            Three simple ways to get energy where and when you need it.
+            Two paths: immediate emergency help or scheduled charging — plus memberships.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -59,10 +54,10 @@ export default function Home() {
               <div className="text-3xl" aria-hidden>⚡</div>
               <h3 className="mt-3 text-xl font-bold">Emergency</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Out of range or stuck roadside? We dispatch mobile fast-charge to your location ASAP.
+                Out of range or stuck roadside? We dispatch mobile fast-charge ASAP.
               </p>
               <a
-                href="#contact"
+                href="tel:+18334865846"
                 className="inline-block mt-4 px-4 py-2 rounded-xl text-white font-semibold"
                 style={{ backgroundColor: COLORS.green }}
               >
@@ -78,11 +73,11 @@ export default function Home() {
                 Book a one-time charge at home, work, or anywhere within our coverage area.
               </p>
               <a
-                href="#contact"
+                href="/request"
                 className="inline-block mt-4 px-4 py-2 rounded-xl font-semibold"
                 style={{ border: `2px solid ${COLORS.green}`, color: COLORS.green, backgroundColor: "transparent" }}
               >
-                Book Now
+                Request Online
               </a>
             </div>
 
@@ -91,87 +86,45 @@ export default function Home() {
               <div className="text-3xl" aria-hidden>🔁</div>
               <h3 className="mt-3 text-xl font-bold">Subscription</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Flexible weekly or monthly plans for fleets and frequent drivers. Predictable pricing.
+                Flexible Weekly or Monthly plans for fleets and frequent drivers.
               </p>
               <a
-                href="#contact"
+                href="/subscribe"
                 className="inline-block mt-4 px-4 py-2 rounded-xl text-white font-semibold"
                 style={{ backgroundColor: COLORS.green }}
               >
-                Get a Quote
+                View Plans
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT (ya lo tenías; mantenerlo igual) */}
       <section id="contact" className="px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Contact us</h2>
-          <p className="mt-3 text-slate-600">We’re based in {CONTACT.city}. For service requests or questions:</p>
-
+          <p className="mt-3 text-slate-600">We’re based in Wallingford, CT. For service requests or questions:</p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`tel:${CONTACT.phoneE164}`}
+              href="tel:+18334865846"
               className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold text-white"
               style={{ backgroundColor: COLORS.green }}
             >
-              Call {CONTACT.phonePretty}
+              Call 1-833-4-VOLTGO
             </a>
             <a
-              href={`mailto:${CONTACT.email}`}
+              href="mailto:info@voltgo.us"
               className="inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold"
               style={{ border: `2px solid ${COLORS.green}`, color: COLORS.green, backgroundColor: "transparent" }}
             >
-              Email {CONTACT.email}
+              Email info@voltgo.us
             </a>
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="mt-auto">
-        <div className="text-white" style={{ backgroundColor: COLORS.blue }}>
-          <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3">
-            <div>
-              <img src="/logo-voltgo.png" alt="VoltGo" width={120} height={50} />
-              <p className="mt-3 text-sm opacity-90">
-                Mobile EV charging and roadside assistance. We bring power and help to you.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Quick links</h3>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li><a href="#services" className="hover:underline">Services</a></li>
-                <li><a href="#contact" className="hover:underline">Contact</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Contact</h3>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li><a href={`tel:${CONTACT.phoneE164}`} className="hover:underline">{CONTACT.phonePretty}</a></li>
-                <li><a href={`mailto:${CONTACT.email}`} className="hover:underline">{CONTACT.email}</a></li>
-                <li>{CONTACT.city}, USA</li>
-              </ul>
-
-              <h3 className="mt-5 font-semibold">Coverage Area</h3>
-              <p className="mt-2 text-sm opacity-90">
-                Service within a ~45-minute radius from Wallingford, including New Haven, Meriden, Middletown,
-                Hamden, Cheshire, North Haven, Southington, Hartford (south area), Waterbury, Milford, and nearby CT towns.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-white/15">
-            <div className="mx-auto max-w-6xl px-4 py-4 text-xs text-center opacity-80">
-              © {new Date().getFullYear()} VoltGo. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* FOOTER: igual al que ya tienes con Coverage Area */}
     </main>
   );
 }

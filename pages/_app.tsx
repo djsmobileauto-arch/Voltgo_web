@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 // Si tu alias "@" está configurado en tsconfig.json, usa esta línea:
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
+
 // Si NO tienes alias "@", usa en cambio:
 // import Navbar from "../components/Navbar";
 import "@/styles/globals.css";

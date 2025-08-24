@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="border-b bg-[var(--volt-dark)] text-white/95 backdrop-blur">
-      <div className="container mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
+    <header className="border-b bg-[var(--volt-dark)] text-white/95 shadow-sm">
+      <div className="container mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo-voltgo.png"  /* archivo en /public */

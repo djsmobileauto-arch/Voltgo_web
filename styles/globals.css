@@ -2,48 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== VOLTGO DESIGN TOKENS ===== */
+/* ===== VOLTGO TOKENS ===== */
 :root {
---volt-primary: #2563eb; /* Azul eléctrico (buttons / highlights) */
---volt-dark: #1e40af; /* Azul oscuro (header) */
---volt-accent: #00c1ff; /* Acento celeste (hover / focus) */
---volt-gray: #f3f6fa; /* Fondo gris-azulado muy claro */
+  --volt-primary: #2563eb;   /* Azul eléctrico (titulares/links) */
+  --volt-dark:    #1e40af;   /* Azul oscuro (header/nav) */
+  --volt-green:   #2cd05c;   /* Verde VoltGo (CTAs) */
+  --volt-accent:  #00c1ff;   /* Acento celeste (hover) */
+  --volt-gray:    #f3f6fa;   /* Fondo gris-azulado claro */
 }
 
+/* Base */
 html, body {
-font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
-Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
-"Segoe UI Emoji";
-background-color: var(--volt-gray);
-color: #111827; /* gray-900 */
-scroll-behavior: smooth;
-margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial,
+    "Apple Color Emoji","Segoe UI Emoji";
+  background-color: var(--volt-gray);
+  color: #111827; /* gray-900 */
+  scroll-behavior: smooth;
+  margin: 0;
 }
 
 /* Links */
-a {
-transition: color .2s ease, opacity .2s ease;
-}
-a:hover {
-color: var(--volt-accent);
-}
+a { transition: color .2s ease, opacity .2s ease; }
+a:hover { color: var(--volt-accent); }
 
-/* Buttons base */
-.btn {
-@apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition;
-}
-.btn-primary {
-background: var(--volt-primary);
-color: white;
-}
-.btn-primary:hover {
-filter: brightness(1.05);
-}
-.btn-ghost {
-background: white;
-color: var(--volt-primary);
-border: 1px solid rgba(37,99,235,.15);
-}
-.btn-ghost:hover {
-background: #ffffffea;
-}
+/* Botones utilitarios */
+.btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition; }
+.btn-primary { background: var(--volt-green); color: #fff; }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost { background: #fff; color: var(--volt-primary); border: 1px solid rgba(37,99,235,.15); }
+.btn-ghost:hover { background: #ffffffea; }
+
+/* Compensación de anclas si el header fuese fijo en el futuro */
+section { scroll-margin-top: 80px; }

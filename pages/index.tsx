@@ -1,7 +1,6 @@
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-
       {/* HERO */}
       <section
         className="text-white text-center py-20"
@@ -30,16 +29,16 @@ export default function Home() {
 
         {/* Botones */}
         <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-          {/* Botón primario */}
+          {/* Primario: verde sólido, texto blanco */}
           <a
             href="#contact"
             className="px-6 py-3 rounded-2xl font-semibold text-white"
-            style={{ backgroundColor: "#15c26b" }} // verde sólido
+            style={{ backgroundColor: "#15c26b" }}
           >
             Request Service
           </a>
 
-          {/* Botón secundario */}
+          {/* Secundario: borde verde, texto verde */}
           <a
             href="#how"
             className="px-6 py-3 rounded-2xl font-semibold"

@@ -1,3 +1,7 @@
+:root {
+  --volt-blue: #0033cc;  /* reemplazá por el azul exacto del logo */
+  --volt-green: #00cc66; /* reemplazá por tu verde corporativo */
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

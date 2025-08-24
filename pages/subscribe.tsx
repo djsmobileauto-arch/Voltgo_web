@@ -1,5 +1,8 @@
 // pages/subscribe.tsx
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
+
+const FORMSPREE_URL = "PASTE_YOUR_FORM_ENDPOINT_HERE"; 
+// Ejemplo: "https://formspree.io/f/abcd1234"
 
 type FormState = {
   name: string;
@@ -18,7 +21,7 @@ export default function SubscribePage() {
     name: "",
     email: "",
     phone: "",
-    city: "",
+    city: "Wallingford, CT",
     vehicle: "",
     color: "",
     connector: "J1772",
@@ -26,41 +29,37 @@ export default function SubscribePage() {
     notes: "",
   });
 
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState<null | "ok" | "error">(null);
+  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
 
-  function onChange(
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }));
-  }
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const { name, value } = e.target;
+      // Actualizamos manteniendo el resto de campos (evita pisarlos)
+      setForm((prev) => ({ ...prev, [name]: value }));
+    },
+    []
+  );
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSending(true);
-    setSent(null);
-
+    if (!FORMSPREE_URL.startsWith("https://")) {
+      alert("Falta pegar el endpoint de Formspree en FORMSPREE_URL.");
+      return;
+    }
     try {
-      // ⬇️ REEMPLAZA ESTE URL con tu endpoint real de Formspree
-      const FORMSPREE_URL = "https://formspree.io/f/mzzapjey";
-
-      const res = await fetch(FORMSPREE_URL, {
+      setStatus("sending");
+      const resp = await fetch(FORMSPREE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-
-      if (res.ok) {
-        setSent("ok");
-        // Limpia el formulario
+      if (resp.ok) {
+        setStatus("ok");
         setForm({
           name: "",
           email: "",
           phone: "",
-          city: "",
+          city: "Wallingford, CT",
           vehicle: "",
           color: "",
           connector: "J1772",
@@ -68,139 +67,164 @@ export default function SubscribePage() {
           notes: "",
         });
       } else {
-        setSent("error");
+        setStatus("error");
       }
     } catch {
-      setSent("error");
-    } finally {
-      setSending(false);
+      setStatus("error");
     }
-  }
-
-  const Field = (props: {
-    label: string;
-    children: React.ReactNode;
-    hint?: string;
-  }) => (
-    <label className="block">
-      <span className="block text-sm font-medium text-gray-700">{props.label}</span>
-      <div className="mt-1">{props.children}</div>
-      {props.hint && (
-        <span className="mt-1 block text-xs text-gray-500">{props.hint}</span>
-      )}
-    </label>
-  );
+  };
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10">
-      <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold">VoltGo Subscriptions</h1>
-        <p className="text-gray-600 mt-2">
-          Choose <b>Weekly</b> or <b>Monthly</b>. Tell us about your vehicle and connector —
-          we’ll follow up ASAP.
-        </p>
-        <div className="mt-4">
-          <a href="tel:18334865846" className="inline-block rounded-md px-5 py-2 bg-green-600 text-white font-medium">
-            Call 1-833-4-VOLTGO
-          </a>
-        </div>
-      </header>
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-6">VoltGo Subscriptions</h1>
+      <p className="text-gray-700 mb-8">
+        Choose Weekly or Monthly. Tell us about your vehicle and connector — we’ll follow up ASAP.
+      </p>
 
-      <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow p-6 space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Field label="Full Name">
-            <input
-              name="name" value={form.name} onChange={onChange}
-              required className="w-full rounded-md border px-3 py-2"
-              placeholder="John Doe"
-            />
-          </Field>
-
-          <Field label="Email Address">
-            <input
-              type="email" name="email" value={form.email} onChange={onChange}
-              required className="w-full rounded-md border px-3 py-2"
-              placeholder="john@example.com"
-            />
-          </Field>
-
-          <Field label="Phone Number">
-            <input
-              name="phone" value={form.phone} onChange={onChange}
-              required className="w-full rounded-md border px-3 py-2"
-              placeholder="(203) 555-0199"
-            />
-          </Field>
-
-          <Field label="City / Area">
-            <input
-              name="city" value={form.city} onChange={onChange}
-              required className="w-full rounded-md border px-3 py-2"
-              placeholder="Wallingford, CT"
-            />
-          </Field>
-
-          <Field label="Vehicle Make & Model">
-            <input
-              name="vehicle" value={form.vehicle} onChange={onChange}
-              required className="w-full rounded-md border px-3 py-2"
-              placeholder="Tesla Model 3, Nissan Leaf, F-150 Lightning…"
-            />
-          </Field>
-
-          <Field label="Vehicle Color">
-            <input
-              name="color" value={form.color} onChange={onChange}
-              className="w-full rounded-md border px-3 py-2"
-              placeholder="Blue, White, Black…"
-            />
-          </Field>
-
-          <Field label="Connector Type" hint="J1772 · CCS1 · Tesla NACS (North American Charging Standard)">
-            <select
-              name="connector" value={form.connector} onChange={onChange}
-              className="w-full rounded-md border px-3 py-2"
-            >
-              <option>J1772</option>
-              <option>CCS1</option>
-              <option>Tesla NACS</option>
-            </select>
-          </Field>
-
-          <Field label="Subscription Plan">
-            <select
-              name="plan" value={form.plan} onChange={onChange}
-              className="w-full rounded-md border px-3 py-2"
-            >
-              <option value="Weekly">Weekly</option>
-              <option value="Monthly">Monthly</option>
-            </select>
-          </Field>
-        </div>
-
-        <Field label="Notes (optional)">
-          <textarea
-            name="notes" value={form.notes} onChange={onChange}
-            rows={4} className="w-full rounded-md border px-3 py-2"
-            placeholder="Anything we should know? Parking spot, access, preferred times…"
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Name */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="name">Full Name</label>
+          <input
+            id="name"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="John Doe"
+            autoComplete="name"
           />
-        </Field>
+        </div>
 
-        <button
-          type="submit"
-          disabled={sending}
-          className="w-full md:w-auto rounded-md bg-blue-600 text-white px-6 py-2 font-semibold disabled:opacity-60"
-        >
-          {sending ? "Sending…" : "Submit"}
-        </button>
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="john@example.com"
+            autoComplete="email"
+          />
+        </div>
 
-        {sent === "ok" && (
-          <p className="text-green-700 mt-2">Thanks! We’ll be in touch shortly.</p>
-        )}
-        {sent === "error" && (
-          <p className="text-red-700 mt-2">There was a problem. Please try again.</p>
-        )}
+        {/* Phone */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="phone">Phone Number</label>
+          <input
+            id="phone"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="(203) 555-0199"
+            autoComplete="tel"
+          />
+        </div>
+
+        {/* City */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="city">City / Area</label>
+          <input
+            id="city"
+            name="city"
+            value={form.city}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="Wallingford, CT"
+            autoComplete="address-level2"
+          />
+        </div>
+
+        {/* Vehicle */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="vehicle">Vehicle Make & Model</label>
+          <input
+            id="vehicle"
+            name="vehicle"
+            value={form.vehicle}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="Tesla Model 3, Nissan Leaf, F-150 Lightning…"
+          />
+        </div>
+
+        {/* Color */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="color">Vehicle Color</label>
+          <input
+            id="color"
+            name="color"
+            value={form.color}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="Blue, White, Black…"
+          />
+        </div>
+
+        {/* Connector */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="connector">Connector Type</label>
+          <select
+            id="connector"
+            name="connector"
+            value={form.connector}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2 bg-white"
+          >
+            <option value="J1772">J1772</option>
+            <option value="NACS (Tesla)">NACS (Tesla)</option>
+            <option value="CCS1">CCS1</option>
+            <option value="CHAdeMO">CHAdeMO</option>
+          </select>
+        </div>
+
+        {/* Plan */}
+        <div>
+          <label className="block text-sm font-medium mb-1" htmlFor="plan">Subscription Plan</label>
+          <select
+            id="plan"
+            name="plan"
+            value={form.plan}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2 bg-white"
+          >
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+          </select>
+        </div>
+
+        {/* Notes */}
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium mb-1" htmlFor="notes">Notes (optional)</label>
+          <textarea
+            id="notes"
+            name="notes"
+            value={form.notes}
+            onChange={handleChange}
+            className="w-full border rounded px-3 py-2"
+            placeholder="Anything we should know? Usual parking spot, access, preferred times…"
+            rows={4}
+          />
+        </div>
+
+        {/* Submit */}
+        <div className="md:col-span-2 mt-2">
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="inline-flex items-center px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700 disabled:opacity-60"
+          >
+            {status === "sending" ? "Sending…" : "Submit"}
+          </button>
+          {status === "ok" && <span className="ml-3 text-green-700">Thanks! We’ll be in touch.</span>}
+          {status === "error" && <span className="ml-3 text-red-600">Something went wrong. Try again.</span>}
+        </div>
       </form>
-    </main>
+    </div>
   );
 }
+

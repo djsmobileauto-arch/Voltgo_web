@@ -1,7 +1,7 @@
 /* HERO (azul corporativo + logo + botones) */
 export default function Home() {
   return (
-    <section className="bg-blue-700 text-white">
+    <section className="bg-[var(--volt-blue)] text-white">
       <div className="container mx-auto max-w-5xl px-4 py-16 text-center">
         
         {/* Logo */}
@@ -29,13 +29,13 @@ export default function Home() {
         <div className="mt-6 flex items-center justify-center gap-4">
           <a
             href="#contact"
-            className="inline-block rounded-lg px-6 py-3 font-semibold bg-green-500 text-white hover:bg-green-600"
+            className="inline-block rounded-lg px-6 py-3 font-semibold bg-[var(--volt-green)] text-white hover:opacity-90"
           >
             Request EV Charge
           </a>
           <a
             href="#how"
-            className="inline-block rounded-lg px-6 py-3 font-semibold border-2 border-white text-white hover:bg-white hover:text-blue-700"
+            className="inline-block rounded-lg px-6 py-3 font-semibold border-2 border-white text-white hover:bg-white hover:text-[var(--volt-blue)]"
           >
             How it works
           </a>

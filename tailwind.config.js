@@ -10,6 +10,12 @@ module.exports = {
         "volt-blue": "var(--volt-blue)",
         "volt-green": "var(--volt-green)",
       },
+      borderRadius: {
+        '2xl': '1rem',
+      },
+      boxShadow: {
+        soft: "0 8px 30px -10px rgba(0,0,0,0.15)",
+      },
     },
   },
   plugins: [],

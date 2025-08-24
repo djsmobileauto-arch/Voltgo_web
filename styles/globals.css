@@ -2,29 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ====== VOLTGO GLOBALS ====== */
-html, body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-  background-color: #f7f9fc; /* fondo claro */
-  color: #0b1324;            /* texto base (azul oscuro) */
-  scroll-behavior: smooth;
+/* ===== VOLTGO DESIGN TOKENS ===== */
+:root {
+--volt-primary: #2563eb; /* Azul eléctrico (buttons / highlights) */
+--volt-dark: #1e40af; /* Azul oscuro (header) */
+--volt-accent: #00c1ff; /* Acento celeste (hover / focus) */
+--volt-gray: #f3f6fa; /* Fondo gris-azulado muy claro */
 }
 
-/* Colores corporativos (tomados del logo) */
-:root{
-  --volt-primary: #2CD05C;  /* verde VoltGo */
-  --volt-dark:    #0B1324;  /* azul casi negro */
-  --volt-accent:  #00C1FF;  /* acento celeste (opcional) */
-  --volt-gray:    #f7f9fc;  /* gris de fondo */
+html, body {
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
+Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
+"Segoe UI Emoji";
+background-color: var(--volt-gray);
+color: #111827; /* gray-900 */
+scroll-behavior: smooth;
+margin: 0;
 }
 
 /* Links */
-a{ transition: color .2s ease; }
-a:hover{ color: var(--volt-primary); }
+a {
+transition: color .2s ease, opacity .2s ease;
+}
+a:hover {
+color: var(--volt-accent);
+}
 
-/* Botones */
-button{ transition: all .2s ease; }
-button:hover{ transform: translateY(-1px); }
-
-/* Compensación de anclas (si el header es fijo en el futuro) */
-section{ scroll-margin-top: 80px; }
+/* Buttons base */
+.btn {
+@apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition;
+}
+.btn-primary {
+background: var(--volt-primary);
+color: white;
+}
+.btn-primary:hover {
+filter: brightness(1.05);
+}
+.btn-ghost {
+background: white;
+color: var(--volt-primary);
+border: 1px solid rgba(37,99,235,.15);
+}
+.btn-ghost:hover {
+background: #ffffffea;
+}

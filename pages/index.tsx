@@ -1,5 +1,6 @@
-import HomeHero from "../components/HomeHero.tsx";
-import ServicesSection from "../components/ServicesSection.tsx";
+import HomeHero from "../components/HomeHero";
+import ServicesSection from "../components/ServicesSection";
+
 
 
 

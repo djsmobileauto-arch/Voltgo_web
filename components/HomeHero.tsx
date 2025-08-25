@@ -3,17 +3,16 @@ import Link from "next/link";
 export default function HomeHero() {
   return (
     <section className="bg-[var(--volt-blue)] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-16 text-center">
-        {/* Logo */}
-     - <img
-  src="/logo-voltgo.png"
-  alt="VoltGo"
-  className="mx-auto mb-4 h-16 w-auto md:h-20 lg:h-24"
-  loading="eager"
-/>
+      <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 text-center">
+        {/* Logo central */}
+        <img
+          src="/logo-voltgo.png"
+          alt="VoltGo"
+          className="mx-auto mb-4 h-16 w-auto md:mb-6 md:h-20 lg:h-24"
+          loading="eager"
+        />
 
-
-        {/* Título + subtítulo */}
+        {/* Título y subtítulo */}
         <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
           Mobile EV Charging & Roadside Assistance
         </h1>

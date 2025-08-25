@@ -1,3 +1,22 @@
+import Link from "next/link";
+
+export default function NavBar() {
+  return (
+    <nav className="flex items-center gap-6">
+      <Link href="/">Home</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/roadside">Roadside</Link>
+      <Link href="/app">App</Link>
+      <Link href="/subscribe">Subscribe</Link>
+      <Link href="/contact">Contact</Link>
+
+      {/* 👉 Nuevo link a Pricing */}
+      <Link href="/pricing" className="font-semibold text-blue-600 hover:underline">
+        Pricing
+      </Link>
+    </nav>
+  );
+}
 // components/Navbar.tsx
 import { useState } from "react";
 import Link from "next/link";

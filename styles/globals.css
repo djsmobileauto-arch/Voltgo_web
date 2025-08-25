@@ -24,3 +24,15 @@ body {
 a {
   @apply transition-colors;
 }
+/* Ajustar los inputs en fondos oscuros */
+input, textarea, select {
+  color: #ffffff;                /* texto dentro del campo en blanco */
+  background-color: rgba(255,255,255,0.1); /* leve transparencia para contraste */
+  border: 1px solid #ffffff33;   /* borde suave en blanco */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #e0e0e0;   /* placeholder en gris claro */
+  opacity: 1;       /* aseguramos que sea visible */
+}

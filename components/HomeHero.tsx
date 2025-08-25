@@ -4,7 +4,7 @@ export default function HomeHero() {
   return (
     <section className="bg-[var(--volt-blue)] text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 text-center">
-        {/* Logo central */}
+        {/* Logo grande centrado */}
         <img
           src="/logo-voltgo.png"
           alt="VoltGo"
@@ -24,7 +24,8 @@ export default function HomeHero() {
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <a
             href="tel:+18334VOLTGO"
-            className="inline-flex items-center justify-center rounded-md bg-[var(--volt-green)] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:brightness-110"
+            className="inline-flex items-center justify-center rounded-md bg-[var(--volt-green)]
+                       px-4 py-2 text-sm font-semibold text-white shadow-sm hover:brightness-110"
             aria-label="Emergency Help Now"
           >
             Emergency Help Now
@@ -32,7 +33,8 @@ export default function HomeHero() {
 
           <Link
             href="/schedule"
-            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-600"
+            className="inline-flex items-center justify-center rounded-md bg-blue-500
+                       px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-600"
             aria-label="Schedule a Charge"
           >
             Schedule a Charge
@@ -40,7 +42,8 @@ export default function HomeHero() {
 
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center rounded-md bg-yellow-500 px-4 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-400"
+            className="inline-flex items-center justify-center rounded-md bg-yellow-500
+                       px-4 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-400"
             aria-label="Membership Plans"
           >
             Membership Plans

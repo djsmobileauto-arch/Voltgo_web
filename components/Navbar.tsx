@@ -3,15 +3,17 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4
-                      bg-[var(--volt-blue)] text-white shadow-sm">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+      <nav
+        className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4
+                   bg-[var(--volt-blue)] text-white shadow-sm"
+      >
+        {/* Logo arriba-izquierda */}
+        <Link href="/" className="flex items-center gap-2" aria-label="VoltGo Home">
           <img src="/logo-voltgo.png" alt="VoltGo" className="h-8 w-auto" />
           <span className="sr-only">VoltGo</span>
         </Link>
 
-        {/* Links */}
+        {/* Menú principal */}
         <ul className="hidden md:flex items-center gap-6 text-sm font-medium">
           <li><Link href="/" className="text-white/90 hover:text-white">Home</Link></li>
           <li><Link href="/services" className="text-white/90 hover:text-white">Services</Link></li>
@@ -22,7 +24,7 @@ export default function NavBar() {
           <li><Link href="/pricing" className="text-white/90 hover:text-white">Pricing</Link></li>
         </ul>
 
-        {/* CTA Emergencia */}
+        {/* Botón de emergencia */}
         <a
           href="tel:+18334VOLTGO"
           className="inline-flex items-center rounded-full bg-[var(--volt-green)]

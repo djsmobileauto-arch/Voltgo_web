@@ -5,11 +5,9 @@ export default function HomeHero() {
     <section className="bg-[var(--volt-blue)] text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 text-center">
         {/* Logo */}
-        <img
-          src="/logo-voltgo.svg"
-          alt="VoltGo"
-          className="mx-auto mb-6 h-12 w-auto md:h-14"
-        />
+     - <img src="/logo-voltgo.svg" alt="VoltGo" className="mx-auto mb-6 h-12 w-auto md:h-14" />
++ <img src="/logo-voltgo.png" alt="VoltGo" className="mx-auto mb-6 h-12 w-auto md:h-14" />
+
 
         {/* Título + subtítulo */}
         <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">

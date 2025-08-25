@@ -6,13 +6,14 @@ export default function NavBar() {
       <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img
-            src="/logo-voltgo.png"  // << usa el PNG que ya tenés en /public
-            alt="VoltGo"
-            className="h-8 w-auto"
-          />
-          <span className="sr-only">VoltGo</span>
-        </Link>
+  <img
+    src="/logo-voltgo.png"
+    alt="VoltGo"
+    className="h-8 w-auto"
+  />
+  <span className="sr-only">VoltGo</span>
+</Link>
+
 
         {/* Links */}
         <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">

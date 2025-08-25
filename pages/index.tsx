@@ -1,3 +1,4 @@
+import Head from "next/head";
 import HomeHero from "../components/HomeHero";
 import ServicesSection from "../components/ServicesSection";
 

@@ -5,7 +5,7 @@ export default function NavBar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <nav
         className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4
-                   bg-[var(--volt-blue)] text-white shadow-sm"
+                   bg-[var(--volt-blue)] text-white"
       >
         {/* Logo arriba-izquierda */}
         <Link href="/" className="flex items-center gap-2" aria-label="VoltGo Home">
@@ -28,7 +28,7 @@ export default function NavBar() {
         <a
           href="tel:+18334VOLTGO"
           className="inline-flex items-center rounded-full bg-[var(--volt-green)]
-                     px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:brightness-110"
+                     px-4 py-1.5 text-sm font-semibold text-white hover:brightness-110"
         >
           Emergency 24/7 · Call 1-833-4-VOLTGO
         </a>

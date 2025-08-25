@@ -1,7 +1,7 @@
 // pages/subscribe.tsx
 import React, { useCallback, useState } from "react";
 
-const FORMSPREE_URL = "PASTE_YOUR_FORM_ENDPOINT_HERE"; 
+const FORMSPREE_URL = "https://formspree.io/f/mzzapjey"; 
 // Ejemplo: "https://formspree.io/f/abcd1234"
 
 type FormState = {

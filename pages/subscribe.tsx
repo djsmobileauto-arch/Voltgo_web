@@ -1,230 +1,98 @@
-// pages/subscribe.tsx
-import React, { useCallback, useState } from "react";
+<section className="bg-[var(--volt-blue)] text-white py-12 px-4">
+  <div className="max-w-3xl mx-auto">
+    <h1 className="text-3xl font-extrabold">VoltGo Subscriptions</h1>
+    <p className="mt-2 text-slate-100">
+      Tell us about your vehicle and connector — we’ll follow up ASAP.
+    </p>
 
-const FORMSPREE_URL = "https://formspree.io/f/mzzapjey"; 
-// Ejemplo: "https://formspree.io/f/abcd1234"
-
-type FormState = {
-  name: string;
-  email: string;
-  phone: string;
-  city: string;
-  vehicle: string;
-  color: string;
-  connector: string;
-  plan: "Weekly" | "Monthly";
-  notes: string;
-};
-
-export default function SubscribePage() {
-  const [form, setForm] = useState<FormState>({
-    name: "",
-    email: "",
-    phone: "",
-    city: "Wallingford, CT",
-    vehicle: "",
-    color: "",
-    connector: "J1772",
-    plan: "Monthly",
-    notes: "",
-  });
-
-  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
-
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const { name, value } = e.target;
-      // Actualizamos manteniendo el resto de campos (evita pisarlos)
-      setForm((prev) => ({ ...prev, [name]: value }));
-    },
-    []
-  );
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!FORMSPREE_URL.startsWith("https://")) {
-      alert("Falta pegar el endpoint de Formspree en FORMSPREE_URL.");
-      return;
-    }
-    try {
-      setStatus("sending");
-      const resp = await fetch(FORMSPREE_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (resp.ok) {
-        setStatus("ok");
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          city: "Wallingford, CT",
-          vehicle: "",
-          color: "",
-          connector: "J1772",
-          plan: "Monthly",
-          notes: "",
-        });
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">VoltGo Subscriptions</h1>
-      <p className="text-gray-700 mb-8">
-        Choose Weekly or Monthly. Tell us about your vehicle and connector — we’ll follow up ASAP.
-      </p>
-
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Name */}
+    <form className="mt-8 space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="name">Full Name</label>
+          <label className="block text-white text-sm mb-1">Full Name</label>
           <input
-            id="name"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
+            type="text"
             placeholder="John Doe"
-            autoComplete="name"
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* Email */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="email">Email Address</label>
+          <label className="block text-white text-sm mb-1">Email Address</label>
           <input
-            id="email"
-            name="email"
             type="email"
-            value={form.email}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
             placeholder="john@example.com"
-            autoComplete="email"
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* Phone */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="phone">Phone Number</label>
+          <label className="block text-white text-sm mb-1">Phone Number</label>
           <input
-            id="phone"
-            name="phone"
-            value={form.phone}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
+            type="tel"
             placeholder="(203) 555-0199"
-            autoComplete="tel"
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* City */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="city">City / Area</label>
+          <label className="block text-white text-sm mb-1">City / Area</label>
           <input
-            id="city"
-            name="city"
-            value={form.city}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
+            type="text"
             placeholder="Wallingford, CT"
-            autoComplete="address-level2"
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* Vehicle */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="vehicle">Vehicle Make & Model</label>
+          <label className="block text-white text-sm mb-1">Vehicle Make & Model</label>
           <input
-            id="vehicle"
-            name="vehicle"
-            value={form.vehicle}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
-            placeholder="Tesla Model 3, Nissan Leaf, F-150 Lightning…"
+            type="text"
+            placeholder="Tesla Model 3, Nissan Leaf, F-150 Lightning..."
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* Color */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="color">Vehicle Color</label>
+          <label className="block text-white text-sm mb-1">Vehicle Color</label>
           <input
-            id="color"
-            name="color"
-            value={form.color}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
-            placeholder="Blue, White, Black…"
+            type="text"
+            placeholder="Blue, White, Black..."
+            className="w-full rounded-md p-2 text-black"
           />
         </div>
 
-        {/* Connector */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="connector">Connector Type</label>
-          <select
-            id="connector"
-            name="connector"
-            value={form.connector}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2 bg-white"
-          >
-            <option value="J1772">J1772</option>
-            <option value="NACS (Tesla)">NACS (Tesla)</option>
-            <option value="CCS1">CCS1</option>
-            <option value="CHAdeMO">CHAdeMO</option>
+          <label className="block text-white text-sm mb-1">Connector Type</label>
+          <select className="w-full rounded-md p-2 text-black">
+            <option>J1772</option>
+            <option>CCS1</option>
+            <option>NEMA 14-50</option>
           </select>
         </div>
 
-        {/* Plan */}
         <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="plan">Subscription Plan</label>
-          <select
-            id="plan"
-            name="plan"
-            value={form.plan}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2 bg-white"
-          >
-            <option value="Weekly">Weekly</option>
-            <option value="Monthly">Monthly</option>
+          <label className="block text-white text-sm mb-1">Subscription Plan</label>
+          <select className="w-full rounded-md p-2 text-black">
+            <option>Monthly</option>
           </select>
         </div>
+      </div>
 
-        {/* Notes */}
-        <div className="md:col-span-2">
-          <label className="block text-sm font-medium mb-1" htmlFor="notes">Notes (optional)</label>
-          <textarea
-            id="notes"
-            name="notes"
-            value={form.notes}
-            onChange={handleChange}
-            className="w-full border rounded px-3 py-2"
-            placeholder="Anything we should know? Usual parking spot, access, preferred times…"
-            rows={4}
-          />
-        </div>
+      <div>
+        <label className="block text-white text-sm mb-1">Notes (optional)</label>
+        <textarea
+          placeholder="Anything we should know? Usual parking spot, access, preferred times..."
+          className="w-full rounded-md p-2 text-black"
+          rows={4}
+        ></textarea>
+      </div>
 
-        {/* Submit */}
-        <div className="md:col-span-2 mt-2">
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="inline-flex items-center px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700 disabled:opacity-60"
-          >
-            {status === "sending" ? "Sending…" : "Submit"}
-          </button>
-          {status === "ok" && <span className="ml-3 text-green-700">Thanks! We’ll be in touch.</span>}
-          {status === "error" && <span className="ml-3 text-red-600">Something went wrong. Try again.</span>}
-        </div>
-      </form>
-    </div>
-  );
-}
-
+      <button
+        type="submit"
+        className="bg-[var(--volt-green)] text-white px-6 py-2 rounded-md font-semibold shadow-soft hover:opacity-90 transition"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>

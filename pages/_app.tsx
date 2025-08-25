@@ -6,10 +6,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NavBar />
-      {/* Deja espacio bajo el header fijo */}
-      <div className="pt-16">
+      {/* espacio exacto bajo el header fijo y mismo fondo azul para que NO quede franja */}
+      <main className="pt-14 bg-[var(--volt-blue)]">
         <Component {...pageProps} />
-      </div>
+      </main>
     </>
   );
 }

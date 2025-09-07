@@ -1,73 +1,116 @@
 import React from "react";
 
-export default function ServicesPage() {
+export default function SubscribePage() {
   return (
     <div className="min-h-screen bg-blue-600 py-12 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold text-center text-white mb-8">
-        Our Services
+        VoltGo Subscriptions
       </h1>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Emergency Rescue */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Emergency Rescue
-          </h2>
-          <p className="text-2xl font-bold text-blue-600 mb-4">$199</p>
-          <p className="text-gray-600">20 kWh delivered (~25 miles of range)</p>
-          <p className="text-gray-600 mt-2">
-            Supported connectors: CCS1, CHAdeMO, NACS (Tesla)
-          </p>
-          <p className="text-gray-500 mt-2 text-sm">
-            Surcharges may apply: cold, peak, overnight
-          </p>
-          <button className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition">
-            Request Now
-          </button>
+      <form className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Full Name */}
+          <div>
+            <label className="block text-gray-700 font-medium">Full Name</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-gray-700 font-medium">Email Address</label>
+            <input
+              type="email"
+              placeholder="you@email.com"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Phone */}
+          <div>
+            <label className="block text-gray-700 font-medium">Phone Number</label>
+            <input
+              type="tel"
+              placeholder="(123) 456-7890"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* City */}
+          <div>
+            <label className="block text-gray-700 font-medium">City / Area</label>
+            <input
+              type="text"
+              placeholder="Wallingford, CT"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Vehicle */}
+          <div>
+            <label className="block text-gray-700 font-medium">Vehicle Make & Model</label>
+            <input
+              type="text"
+              placeholder="Tesla Model 3"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Color */}
+          <div>
+            <label className="block text-gray-700 font-medium">Vehicle Color</label>
+            <input
+              type="text"
+              placeholder="Blue"
+              className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Connector */}
+          <div>
+            <label className="block text-gray-700 font-medium">Connector Type</label>
+            <select className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Select Connector</option>
+              <option value="CCS1">CCS1</option>
+              <option value="CHAdeMO">CHAdeMO</option>
+              <option value="NACS">NACS (Tesla)</option>
+            </select>
+          </div>
+
+          {/* Subscription */}
+          <div>
+            <label className="block text-gray-700 font-medium">Subscription Plan</label>
+            <select className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Select Plan</option>
+              <option value="roadside">Roadside Assistance</option>
+              <option value="voltgo-pass">VoltGo Pass</option>
+              <option value="voltgo-pro">VoltGo Pro</option>
+            </select>
+          </div>
         </div>
 
-        {/* On-Demand (Scheduled) */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            On-Demand (Scheduled)
-          </h2>
-          <p className="text-gray-600">Plan your charge in advance (24h notice)</p>
-          <ul className="text-gray-700 mt-3 space-y-1">
-            <li>20 kWh – $129</li>
-            <li>30 kWh – $159</li>
-            <li>40 kWh – $189</li>
-          </ul>
-          <p className="text-gray-600 mt-2">
-            Supported connectors: CCS1, CHAdeMO, NACS (Tesla)
-          </p>
-          <button className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition">
-            Schedule
-          </button>
+        {/* Notes */}
+        <div>
+          <label className="block text-gray-700 font-medium">Notes</label>
+          <textarea
+            placeholder="Parking spot access, preferred times..."
+            className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
         </div>
 
-        {/* Subscriptions */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Subscriptions
-          </h2>
-          <ul className="text-gray-700 mt-3 space-y-2">
-            <li>
-              <span className="font-semibold">VoltGo Pass</span>: $59/month – 2x 15 kWh
-            </li>
-            <li>
-              <span className="font-semibold">VoltGo Pro</span>: $119/month – 4x 20 kWh
-            </li>
-          </ul>
-          <p className="text-gray-500 mt-2 text-sm">
-            Subscribers also pay surcharges (cold, peak, overnight).  
-            Standard response: 3–5 hours. Emergency response: priority.  
-            Supported connectors: CCS1, CHAdeMO, NACS (Tesla).
-          </p>
-          <button className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition">
-            View Plans
+        {/* Submit */}
+        <div className="text-center">
+          <button
+            type="submit"
+            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+          >
+            Submit
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

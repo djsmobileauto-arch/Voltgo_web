@@ -52,7 +52,7 @@ export default function Footer() {
 
         {/* Información legal corporativa */}
         <div className="mt-8 text-xs text-gray-200">
-          VoltGo is the commercial brand powered by <strong>DJ’S Mobile Auto Solutions LLC</strong> — 131 Knollwood Dr, Wallingford, CT 06492, United States. D-U-N-S: 136807155.
+          VoltGo is the commercial brand powered by <strong>DJ’S Mobile Auto Solutions LLC</strong> — Walligford, CT 06492, United States. D-U-N-S: 136807155.
         </div>
       </div>
     </footer>

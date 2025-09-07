@@ -1,59 +1,45 @@
-// pages/roadside.tsx
-export default function Roadside() {
-  const phone = "1-833-4-VOLTGO";
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  {/* Jump Start */}
+  <div className="bg-white shadow-md rounded-lg p-6 text-center">
+    <h3 className="text-xl font-bold text-blue-600 mb-3">Jump Start</h3>
+    <p className="text-gray-600 mb-4">
+      Battery dead? Quick jump start service to get you back on the road.
+    </p>
+    <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 transition">
+      Request Help
+    </button>
+  </div>
 
-  const items = [
-    {
-      title: "Jump Start",
-      desc: "Dead battery? We’ll get you back on the road quickly.",
-    },
-    {
-      title: "Flat Tire",
-      desc: "On-site tire replacement or repair, anytime and anywhere.",
-    },
-    {
-      title: "Fuel Delivery",
-      desc: "Out of gas? We’ll deliver fuel straight to your location.",
-    },
-    {
-      title: "Lockout",
-      desc: "Keys locked inside? We’ll unlock your vehicle safely.",
-    },
-  ];
+  {/* Flat Tire */}
+  <div className="bg-white shadow-md rounded-lg p-6 text-center">
+    <h3 className="text-xl font-bold text-blue-600 mb-3">Flat Tire</h3>
+    <p className="text-gray-600 mb-4">
+      Flat tire? We repair or install your spare on-site.
+    </p>
+    <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 transition">
+      Request Help
+    </button>
+  </div>
 
-  return (
-    <div className="bg-[var(--volt-blue)] min-h-screen text-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        {/* Título */}
-        <h1 className="text-center text-4xl font-extrabold mb-3">
-          Roadside Assistance
-        </h1>
+  {/* Fuel Delivery */}
+  <div className="bg-white shadow-md rounded-lg p-6 text-center">
+    <h3 className="text-xl font-bold text-blue-600 mb-3">Fuel Delivery</h3>
+    <p className="text-gray-600 mb-4">
+      Run out of gas? We deliver fuel directly to your vehicle.
+    </p>
+    <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 transition">
+      Request Help
+    </button>
+  </div>
 
-        {/* Subtítulo */}
-        <p className="text-center text-blue-100 mb-10">
-          24/7 roadside support — fast, safe, and reliable help when you need it most.
-        </p>
-
-        {/* Tarjetas */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map((s) => (
-            <div
-              key={s.title}
-              className="bg-white text-slate-800 p-6 rounded-2xl shadow-soft"
-            >
-              <h2 className="text-xl font-bold mb-2">{s.title}</h2>
-              <p className="mb-4">{s.desc}</p>
-              <a
-                href={`tel:${phone.replaceAll("-", "")}`}
-                aria-label={`Request ${s.title} help`}
-                className="inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold text-white bg-[var(--volt-green)] hover:opacity-90 transition"
-              >
-                Request Help
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+  {/* Lockout */}
+  <div className="bg-white shadow-md rounded-lg p-6 text-center">
+    <h3 className="text-xl font-bold text-blue-600 mb-3">Lockout</h3>
+    <p className="text-gray-600 mb-4">
+      Locked out? Professional unlock service to get you going.
+    </p>
+    <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 transition">
+      Request Help
+    </button>
+  </div>
+</div>

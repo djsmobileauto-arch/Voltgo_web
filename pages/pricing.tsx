@@ -37,9 +37,9 @@ export default function Pricing() {
           <div className="rounded-lg bg-white p-6 shadow-lg text-center space-y-3">
             <h3 className="text-2xl font-bold text-blue-700">VoltGo Pass</h3>
             <p className="text-4xl font-extrabold text-gray-900">
-              $49<span className="text-lg">/month</span>
+              $59<span className="text-lg">/month</span>
             </p>
-            <p className="text-gray-700">2 × 20 kWh charges per month</p>
+            <p className="text-gray-700">2 × 15 kWh charges per month</p>
             <p className="text-gray-700">10% off extra services</p>
             <p className="text-gray-700">Standard response: 4–5 hours</p>
             <p className="text-sm text-gray-600">
@@ -54,15 +54,20 @@ export default function Pricing() {
             <p className="text-4xl font-extrabold text-gray-900">
               $119<span className="text-lg">/month</span>
             </p>
-            <p className="text-gray-700">Unlimited priority response</p>
+            <p className="text-gray-700">4 × 20 kWh charges per month</p>
+            <p className="text-gray-700">Priority response</p>
             <p className="text-gray-700">No surcharges (cold, peak, overnight included)</p>
-            <p className="text-gray-700">Discounted kWh for additional usage</p>
             <p className="text-sm text-gray-600">
               Supported connectors: CCS1, CHAdeMO, NACS (Tesla).
             </p>
           </div>
 
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-center text-sm text-gray-200 mt-6">
+          *Introductory promotional pricing available for the first 90 days. Standard rates apply thereafter.
+        </p>
       </div>
     </div>
   );

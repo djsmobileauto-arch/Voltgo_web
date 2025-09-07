@@ -1,86 +1,98 @@
-import React from "react";
+<div className="bg-blue-600 py-12">
+  <h2 className="text-3xl font-bold text-center text-white mb-10">
+    Simple, Transparent Pricing
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
-export default function PricingPage() {
-  return (
-    <div className="bg-blue-600 py-12">
-      <h2 className="text-center text-3xl font-bold text-white mb-10">
-        Simple, Transparent Pricing
-      </h2>
+    {/* Roadside Assistance */}
+    <div className="bg-white shadow-md rounded-lg p-6">
+      <h3 className="text-2xl font-bold text-center mb-4">Roadside Assistance</h3>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        {/* Roadside Assistance */}
-        <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <h3 className="text-xl font-semibold mb-4">Roadside Assistance</h3>
-          <p className="font-bold text-2xl mb-2">Safe Roads Basic</p>
-          <p className="mb-4">$14.99/month</p>
-          <p>1 service/month (flat tire, lockout, jump start 12V, or fuel)</p>
-          <p>Response time: up to 60 min</p>
-          <p className="text-sm mt-2">Extra services 30% off</p>
-
-          <hr className="my-4" />
-
-          <p className="font-bold text-2xl mb-2">Safe Roads Plus</p>
-          <p className="mb-4">$24.99/month</p>
-          <p>2 services/month (any type: flat tire, lockout, jump start 12V, or fuel)</p>
-          <p>Priority response: ~45 min</p>
-          <p className="text-sm mt-2">Extra services 50% off</p>
-
-          <hr className="my-4" />
-
-          <p className="font-bold text-2xl mb-2">Safe Roads Fleet</p>
-          <p className="mb-4">$79.99/month</p>
-          <p>For up to 5 vehicles</p>
-          <p>10 services/month</p>
-          <p>24/7 coverage</p>
-        </div>
-
-        {/* EV Charging (One-Time) */}
-        <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <h3 className="text-xl font-semibold mb-4">EV Charging (One-Time)</h3>
-          <p className="font-bold text-2xl mb-2">Emergency Rescue</p>
-          <p className="mb-4">$199</p>
-          <p>20 kWh delivered (~25 miles of range)</p>
-          <p className="text-sm mb-4">Surcharges may apply: cold, peak, overnight</p>
-
-          <hr className="my-4" />
-
-          <p className="font-bold text-2xl mb-2">On-Demand (Scheduled)</p>
-          <p>20 kWh – $129</p>
-          <p>30 kWh – $159</p>
-          <p>40 kWh – $189</p>
-          <p className="text-sm mt-2">Plan your charge in advance (24h notice)</p>
-          <p className="text-sm">Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</p>
-        </div>
-
-        {/* EV Subscriptions */}
-        <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <h3 className="text-xl font-semibold mb-4">EV Subscriptions</h3>
-          
-          <p className="font-bold text-2xl mb-2">VoltGo Pass</p>
-          <p className="mb-4">$59/month</p>
-          <p>2 × 15 kWh charges/month</p>
-          <p>Includes 1 roadside assistance service (flat tire, lockout, or jump start 12V)</p>
-          <p>Standard response: 2–3 hours</p>
-          <p className="text-sm">Surcharges: cold, peak, overnight</p>
-
-          <hr className="my-4" />
-
-          <p className="font-bold text-2xl mb-2">VoltGo Pro</p>
-          <p className="mb-4">$119/month</p>
-          <p>4 × 20 kWh charges/month</p>
-          <p>Includes 2 roadside assistance services</p>
-          <p>High-priority response: ≤ 90 minutes</p>
-          <p>No surcharges (cold, peak, overnight included)</p>
-        </div>
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-600">Safe Roads Basic</h4>
+        <p className="text-gray-700">$14.99/month</p>
+        <p className="text-gray-600 text-sm">
+          • 1 service/month (flat tire, lockout, jump start 12V, or fuel)<br />
+          • Response time: up to 60 min<br />
+          • Extra services 30% off
+        </p>
       </div>
 
-      {/* Disclaimer */}
-      <p className="text-center text-xs text-gray-200 mt-8 max-w-4xl mx-auto">
-        All prices are subject to change. Roadside assistance includes flat tire, lockout, jump start 12V, and fuel delivery. 
-        EV charging services depend on connector compatibility and may include surcharges for cold, peak, or overnight service. 
-        Fleet plans cover up to 5 vehicles as specified.
-      </p>
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-600">Safe Roads Plus</h4>
+        <p className="text-gray-700">$24.99/month</p>
+        <p className="text-gray-600 text-sm">
+          • 2 services/month (any type: flat tire, lockout, jump start 12V, or fuel)<br />
+          • Response time: ≈ 45 min<br />
+          • Extra services 50% off
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-blue-600">Safe Roads Fleet</h4>
+        <p className="text-gray-700">$79.99/month</p>
+        <p className="text-gray-600 text-sm">
+          • Up to 5 vehicles<br />
+          • 10 services/month<br />
+          • 24/7 coverage included
+        </p>
+      </div>
     </div>
-  );
-}
+
+    {/* EV Charging */}
+    <div className="bg-white shadow-md rounded-lg p-6">
+      <h3 className="text-2xl font-bold text-center mb-4">EV Charging (One-Time)</h3>
+
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-600">Emergency Rescue</h4>
+        <p className="text-gray-700">$199</p>
+        <p className="text-gray-600 text-sm">
+          • 20 kWh delivered (~25 miles of range)<br />
+          • Response time: 45 min<br />
+          • Surcharges may apply: cold, peak, overnight<br />
+          • Supported connectors: CCS1, CHAdeMO, NACS (Tesla)
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-blue-600">On-Demand (Scheduled)</h4>
+        <p className="text-gray-600 text-sm">
+          • 20 kWh – $129<br />
+          • 30 kWh – $159<br />
+          • 40 kWh – $189<br />
+          • Schedule 24h in advance<br />
+          • Supported connectors: CCS1, CHAdeMO, NACS (Tesla)
+        </p>
+      </div>
+    </div>
+
+    {/* EV Subscriptions */}
+    <div className="bg-white shadow-md rounded-lg p-6">
+      <h3 className="text-2xl font-bold text-center mb-4">EV Subscriptions</h3>
+
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-600">VoltGo Pass</h4>
+        <p className="text-gray-700">$59/month</p>
+        <p className="text-gray-600 text-sm">
+          • 2 × 15 kWh charges/month<br />
+          • Includes 1 roadside assistance service (flat tire, lockout, or jump start 12V)<br />
+          • Standard response: 2–3 hours<br />
+          • Surcharges: cold, peak, overnight
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xl font-semibold text-blue-600">VoltGo Pro</h4>
+        <p className="text-gray-700">$119/month</p>
+        <p className="text-gray-600 text-sm">
+          • 4 × 20 kWh charges/month<br />
+          • Includes 2 roadside assistance services<br />
+          • High-priority response: ≤ 90 minutes<br />
+          • No surcharges (cold, peak, overnight)
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+

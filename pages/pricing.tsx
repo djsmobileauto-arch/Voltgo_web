@@ -6,7 +6,7 @@ export default function Pricing() {
           Simple, Transparent Pricing
         </h1>
         
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
 
           {/* Emergency Rescue */}
           <div className="rounded-lg bg-white p-6 shadow-lg text-center space-y-3">
@@ -42,6 +42,21 @@ export default function Pricing() {
             <p className="text-gray-700">2 × 20 kWh charges per month</p>
             <p className="text-gray-700">10% off extra services</p>
             <p className="text-gray-700">Standard response: 4–5 hours</p>
+            <p className="text-sm text-gray-600">
+              Supported connectors: CCS1, CHAdeMO, NACS (Tesla).
+            </p>
+            <p className="text-xs text-gray-500">Surcharges: cold, peak, overnight</p>
+          </div>
+
+          {/* VoltGo Pro */}
+          <div className="rounded-lg bg-white p-6 shadow-lg text-center space-y-3">
+            <h3 className="text-2xl font-bold text-blue-700">VoltGo Pro</h3>
+            <p className="text-4xl font-extrabold text-gray-900">
+              $119<span className="text-lg">/month</span>
+            </p>
+            <p className="text-gray-700">Unlimited priority response</p>
+            <p className="text-gray-700">No surcharges (cold, peak, overnight included)</p>
+            <p className="text-gray-700">Discounted kWh for additional usage</p>
             <p className="text-sm text-gray-600">
               Supported connectors: CCS1, CHAdeMO, NACS (Tesla).
             </p>

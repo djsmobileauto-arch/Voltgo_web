@@ -1,62 +1,51 @@
 import React from "react";
 
-export default function ServicesPage() {
+export default function Services() {
   return (
-    <div className="min-h-screen bg-blue-600 py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-center text-white mb-12">
+    <div className="bg-blue-600 py-12">
+      <h2 className="text-3xl font-bold text-center text-white mb-12">
         Our Services
-      </h1>
-
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
         
         {/* Roadside Assistance */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">
-            Roadside Assistance
-          </h2>
-          <ul className="text-gray-700 space-y-2">
-            <li><span className="font-semibold">Safe Roads Basic</span>: $14.99/mo – 1 service/month</li>
-            <li><span className="font-semibold">Safe Roads Plus</span>: $24.99/mo – 2 services/month, 3rd at 50% off</li>
-            <li><span className="font-semibold">Safe Roads Fleet</span>: $99.99/mo – 8 services for up to 5 vehicles</li>
-          </ul>
-          <p className="text-sm text-gray-500 mt-4">
-            Public pricing: Jump Start $75 · Lockout $85 · Flat Tire $89 · Fuel Delivery $99 + fuel
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-xl font-semibold text-blue-700 mb-4">Roadside Assistance</h3>
+          <p className="text-gray-700 mb-2">
+            Reliable help when you need it most. Coverage includes flat tire repair/change, 12V jump start, lockout, and fuel delivery.
           </p>
+          <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
+            <li>Standard response times from 45–60 minutes</li>
+            <li>Available 24/7 within coverage area</li>
+            <li>Discounted rates with subscriptions</li>
+          </ul>
         </div>
 
         {/* EV Charging */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">
-            EV Charging
-          </h2>
-          <p className="text-gray-600 mb-3">
-            On-demand mobile DC fast charging at your location.
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-xl font-semibold text-blue-700 mb-4">EV Charging</h3>
+          <p className="text-gray-700 mb-2">
+            On-demand mobile DC fast charging delivered wherever your EV is stranded. 
+            Avoid the stress of range anxiety.
           </p>
-          <ul className="text-gray-700 space-y-2">
-            <li>Emergency Rescue – $199 (20 kWh)</li>
-            <li>On-Demand Scheduled: 20 kWh – $129 · 30 kWh – $159 · 40 kWh – $189</li>
+          <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
+            <li>Emergency Rescue: 20 kWh (~25 miles of range)</li>
+            <li>Scheduled charges: 20, 30, or 40 kWh options</li>
+            <li>Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</li>
           </ul>
-          <p className="text-sm text-gray-500 mt-4">
-            Supported connectors: CCS1, CHAdeMO, NACS (Tesla)
-          </p>
         </div>
 
-        {/* Subscriptions */}
-        <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">
-            Subscriptions
-          </h2>
-          <ul className="text-gray-700 space-y-2">
-            <li>
-              <span className="font-semibold">VoltGo Pass</span>: $59/mo – 2×15 kWh + 1 roadside included
-            </li>
-            <li>
-              <span className="font-semibold">VoltGo Pro</span>: $119/mo – 4×20 kWh + 2 roadside included
-            </li>
-          </ul>
-          <p className="text-sm text-gray-500 mt-4">
-            Subscribers enjoy discounted extra roadside services and faster response times.
+        {/* EV Subscriptions */}
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-xl font-semibold text-blue-700 mb-4">EV Subscriptions</h3>
+          <p className="text-gray-700 mb-2">
+            Flexible plans designed to give you peace of mind and predictable costs for your EV charging needs.
           </p>
+          <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
+            <li>VoltGo Pass: 2 × 15 kWh charges per month + roadside</li>
+            <li>VoltGo Pro: 4 × 20 kWh charges per month + premium roadside</li>
+            <li>No hidden fees, transparent pricing</li>
+          </ul>
         </div>
       </div>
     </div>

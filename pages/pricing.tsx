@@ -41,7 +41,7 @@ export default function Pricing() {
             </p>
             <p className="text-gray-700">2 × 15 kWh charges per month</p>
             <p className="text-gray-700">10% off extra services</p>
-            <p className="text-gray-700">Standard response: 4–5 hours</p>
+            <p className="text-gray-700">Priority response within 2–3 hours</p>
             <p className="text-sm text-gray-600">
               Supported connectors: CCS1, CHAdeMO, NACS (Tesla).
             </p>
@@ -55,7 +55,7 @@ export default function Pricing() {
               $119<span className="text-lg">/month</span>
             </p>
             <p className="text-gray-700">4 × 20 kWh charges per month</p>
-            <p className="text-gray-700">Priority response</p>
+            <p className="text-gray-700">High-priority response within 90 minutes</p>
             <p className="text-gray-700">No surcharges (cold, peak, overnight included)</p>
             <p className="text-sm text-gray-600">
               Supported connectors: CCS1, CHAdeMO, NACS (Tesla).

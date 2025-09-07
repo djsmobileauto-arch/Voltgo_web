@@ -1,126 +1,97 @@
-export default function Pricing() {
-  return (
-    <div className="bg-blue-700 py-16">
-      <div className="container mx-auto px-6">
-        <h1 className="text-3xl font-bold text-center text-white mb-12">
-          Simple, Transparent Pricing
-        </h1>
+<div className="bg-blue-600 py-12">
+  <h2 className="text-center text-3xl font-bold text-white mb-10">
+    Simple, Transparent Pricing
+  </h2>
 
-        {/* ===== ROW 1: ROADSIDE / EV CHARGING / SUBSCRIPTIONS ===== */}
-        <div className="grid gap-8 md:grid-cols-3">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {/* ROADSIDE ASSISTANCE PLANS */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-xl font-bold text-blue-700 mb-4">Roadside Assistance</h2>
-
-            <div className="space-y-4">
-              <div className="border rounded-md p-4">
-                <h3 className="text-lg font-semibold">Safe Roads Basic</h3>
-                <p className="text-2xl font-extrabold text-gray-900">$14.99<span className="text-base">/mo</span></p>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>1 servicio/mes (flat tire, lockout o jump start 12V)</li>
-                  <li>Respuesta: hasta 60 minutos</li>
-                  <li>Servicios adicionales con 30% off</li>
-                </ul>
-              </div>
-
-              <div className="border rounded-md p-4">
-                <h3 className="text-lg font-semibold">Safe Roads Plus</h3>
-                <p className="text-2xl font-extrabold text-gray-900">$24.99<span className="text-base">/mo</span></p>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>2 servicios/mes (flat, lockout, jump 12V o fuel delivery)</li>
-                  <li>3er servicio al 50% off</li>
-                  <li>Respuesta prioritaria: hasta 45 minutos</li>
-                </ul>
-              </div>
-
-              <div className="border rounded-md p-4">
-                <h3 className="text-lg font-semibold">Safe Roads Fleet</h3>
-                <p className="text-2xl font-extrabold text-gray-900">$99.99<span className="text-base">/mo</span></p>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>Hasta 5 vehículos · 8 servicios/mes</li>
-                  <li>24/7 coverage</li>
-                  <li>Servicios extra: $39 c/u</li>
-                </ul>
-              </div>
-
-              <div className="border rounded-md p-4 bg-gray-50">
-                <h4 className="font-semibold text-gray-800">Público general (sin suscripción)</h4>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>Jump Start (12V): <strong>$75</strong></li>
-                  <li>Lockout: <strong>$85</strong></li>
-                  <li>Flat Tire: <strong>$89</strong></li>
-                  <li>Fuel Delivery: <strong>$99</strong> + fuel</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* EV CHARGING (ONE-TIME) */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-xl font-bold text-blue-700 mb-4">EV Charging (One-Time)</h2>
-
-            <div className="border rounded-md p-4 mb-4">
-              <h3 className="text-lg font-semibold">Emergency Rescue</h3>
-              <p className="text-2xl font-extrabold text-gray-900">$199</p>
-              <p className="text-gray-700 mt-1">20 kWh delivered (~25 miles of range)</p>
-              <p className="text-xs text-gray-600 mt-1">Surcharges may apply: cold, peak, overnight</p>
-            </div>
-
-            <div className="border rounded-md p-4">
-              <h3 className="text-lg font-semibold">On-Demand (Scheduled)</h3>
-              <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                <li>20 kWh — <strong>$129</strong></li>
-                <li>30 kWh — <strong>$159</strong></li>
-                <li>40 kWh — <strong>$189</strong></li>
-              </ul>
-              <p className="text-gray-700 mt-2">Plan your charge in advance (24h notice).</p>
-            </div>
-
-            <p className="text-sm text-gray-600 mt-4">
-              Supported connectors: <strong>CCS1, CHAdeMO, NACS (Tesla)</strong>
-            </p>
-          </div>
-
-          {/* EV SUBSCRIPTIONS (WITH ROADSIDE INCLUDED) */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-xl font-bold text-blue-700 mb-4">EV Subscriptions</h2>
-
-            <div className="space-y-4">
-              <div className="border rounded-md p-4">
-                <h3 className="text-lg font-semibold">VoltGo Pass</h3>
-                <p className="text-2xl font-extrabold text-gray-900">$59<span className="text-base">/mo</span></p>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>2 × 15 kWh por mes</li>
-                  <li>+ 1 servicio de roadside incluido (flat, lockout o jump 12V)</li>
-                  <li>Priority response: <strong>2–3 horas</strong></li>
-                  <li>Surcharges: cold, peak, overnight</li>
-                </ul>
-              </div>
-
-              <div className="border rounded-md p-4">
-                <h3 className="text-lg font-semibold">VoltGo Pro</h3>
-                <p className="text-2xl font-extrabold text-gray-900">$119<span className="text-base">/mo</span></p>
-                <ul className="text-gray-700 list-disc ml-5 mt-2 space-y-1">
-                  <li>4 × 20 kWh por mes</li>
-                  <li>+ 2 servicios de roadside incluidos</li>
-                  <li>High-priority response: <strong>≤ 90 minutos</strong></li>
-                  <li><strong>No</strong> surcharges (cold, peak, overnight incluidos)</li>
-                </ul>
-              </div>
-
-              <p className="text-sm text-gray-600">
-                Extra roadside para suscriptores: descuentos exclusivos (según plan).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* DISCLAIMER PROMO FLYERS */}
-        <p className="text-center text-sm text-gray-200 mt-8">
-          *Introductory promotional pricing available for the first 90 days. Standard rates apply thereafter.
-        </p>
+    {/* Roadside Assistance */}
+    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+      <h3 className="text-xl font-semibold mb-4">Roadside Assistance</h3>
+      <div className="mb-6">
+        <h4 className="font-bold">$14.99<span className="text-sm">/month</span></h4>
+        <p className="mt-2">Safe Roads Basic</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>1 service/month (flat tire, lockout, jump start 12V, or fuel delivery)</li>
+          <li>Response within 60 minutes</li>
+          <li>Extra services: 30% off</li>
+        </ul>
+      </div>
+      <div className="mb-6">
+        <h4 className="font-bold">$24.99<span className="text-sm">/month</span></h4>
+        <p className="mt-2">Safe Roads Plus</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>2 services/month (any combination)</li>
+          <li>Response within 45 minutes</li>
+          <li>Extra services: 50% off</li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-bold">$79.99<span className="text-sm">/month</span></h4>
+        <p className="mt-2">Safe Roads Fleet</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>Up to 5 vehicles covered</li>
+          <li>10 services/month</li>
+          <li>24/7 priority response</li>
+        </ul>
       </div>
     </div>
-  );
-}
+
+    {/* EV Charging (One-Time) */}
+    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+      <h3 className="text-xl font-semibold mb-4">EV Charging (One-Time)</h3>
+      <div className="mb-6">
+        <h4 className="font-bold">$199</h4>
+        <p className="mt-2">Emergency Rescue</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>20 kWh delivered (~25 miles of range)</li>
+          <li>Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</li>
+          <li>Surcharges may apply: cold, peak, overnight</li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-bold">On-Demand (Scheduled)</h4>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>20 kWh – $129</li>
+          <li>30 kWh – $159</li>
+          <li>40 kWh – $189</li>
+          <li>Plan at least 24h in advance</li>
+          <li>Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* EV Subscriptions */}
+    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+      <h3 className="text-xl font-semibold mb-4">EV Subscriptions</h3>
+      <div className="mb-6">
+        <h4 className="font-bold">$59<span className="text-sm">/month</span></h4>
+        <p className="mt-2">VoltGo Pass</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>2 × 15 kWh charges/month</li>
+          <li>+ 1 roadside assistance service (flat tire, lockout, or jump start 12V)</li>
+          <li>Standard response: 2–3 hours</li>
+          <li>Surcharges: cold, peak, overnight</li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-bold">$119<span className="text-sm">/month</span></h4>
+        <p className="mt-2">VoltGo Pro</p>
+        <ul className="text-sm mt-2 space-y-1">
+          <li>4 × 20 kWh charges/month</li>
+          <li>+ 2 roadside assistance services/month</li>
+          <li>High-priority response: ≤ 90 minutes</li>
+          <li>No surcharges (cold, peak, overnight included)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  {/* Disclaimer */}
+  <p className="text-center text-xs text-gray-200 mt-8 max-w-4xl mx-auto">
+    All prices are subject to change. Roadside assistance includes flat tire, lockout, jump start 12V, and fuel delivery. 
+    EV charging services depend on connector compatibility and may include surcharges for cold, peak, or overnight service. 
+    Fleet plans cover up to 5 vehicles as specified.
+  </p>
+</div>

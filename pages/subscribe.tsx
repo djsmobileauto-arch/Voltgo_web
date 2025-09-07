@@ -1,66 +1,115 @@
 export default function Subscribe() {
   return (
-    <div className="subscribe-page">
-      <h2>VoltGo Subscriptions</h2>
-      <p>
-        Tell us about your vehicle and connector — we’ll follow up ASAP.
-      </p>
+    <div className="bg-blue-700 py-16 min-h-screen">
+      <div className="container mx-auto px-6">
+        <h1 className="text-3xl font-bold text-center text-white mb-10">
+          VoltGo Subscriptions
+        </h1>
+        <p className="text-center text-gray-200 mb-8">
+          Tell us about your vehicle and connector — we’ll follow up ASAP.
+        </p>
 
-      <form className="subscribe-form">
-        <label>
-          Full Name:
-          <input type="text" name="fullname" required />
-        </label>
+        <form className="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Full Name */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Full Name</label>
+            <input
+              type="text"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="John Doe"
+            />
+          </div>
 
-        <label>
-          Email Address:
-          <input type="email" name="email" required />
-        </label>
+          {/* Email Address */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Email Address</label>
+            <input
+              type="email"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="you@email.com"
+            />
+          </div>
 
-        <label>
-          Phone Number:
-          <input type="tel" name="phone" required />
-        </label>
+          {/* Phone Number */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
+            <input
+              type="tel"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="(123) 456-7890"
+            />
+          </div>
 
-        <label>
-          City / Area:
-          <input type="text" name="city" required />
-        </label>
+          {/* City / Area */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">City / Area</label>
+            <input
+              type="text"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Wallingford, CT"
+            />
+          </div>
 
-        <label>
-          Vehicle Make & Model:
-          <input type="text" name="vehicle" />
-        </label>
+          {/* Vehicle Make & Model */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Vehicle Make & Model</label>
+            <input
+              type="text"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Tesla Model 3"
+            />
+          </div>
 
-        <label>
-          Vehicle Color:
-          <input type="text" name="color" />
-        </label>
+          {/* Vehicle Color */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Vehicle Color</label>
+            <input
+              type="text"
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Blue"
+            />
+          </div>
 
-        <label>
-          Connector Type:
-          <select name="connector" required>
-            <option value="CCS1">CCS1</option>
-            <option value="CHAdeMO">CHAdeMO</option>
-            <option value="NACS">NACS (Tesla)</option>
-          </select>
-        </label>
+          {/* Connector Type */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Connector Type</label>
+            <select className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>CCS1</option>
+              <option>CHAdeMO</option>
+              <option>NACS (Tesla)</option>
+            </select>
+          </div>
 
-        <label>
-          Subscription Plan:
-          <select name="plan" required>
-            <option value="pass">VoltGo Pass – $49/month</option>
-            <option value="pro">VoltGo Pro – from $119/month</option>
-          </select>
-        </label>
+          {/* Subscription Plan */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Subscription Plan</label>
+            <select className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>VoltGo Pass - $59/month</option>
+              <option>VoltGo Pro - $119/month</option>
+            </select>
+          </div>
 
-        <label>
-          Notes (parking spot access, preferred times):
-          <textarea name="notes"></textarea>
-        </label>
+          {/* Notes */}
+          <div className="md:col-span-2">
+            <label className="block text-gray-700 font-medium mb-2">Notes</label>
+            <textarea
+              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              rows={3}
+              placeholder="Parking spot access, preferred times, etc."
+            />
+          </div>
 
-        <button type="submit">Submit</button>
-      </form>
+          {/* Submit Button */}
+          <div className="md:col-span-2 text-center">
+            <button
+              type="submit"
+              className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

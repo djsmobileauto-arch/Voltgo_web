@@ -1,27 +1,25 @@
+import React from "react";
+import { FaBolt, FaChargingStation, FaBox } from "react-icons/fa";
+
 export default function Home() {
   return (
     <div className="bg-blue-600 min-h-screen text-white">
-      {/* Hero Section */}
-      <div className="text-center py-16">
-        {/* Logo */}
+      {/* Header con logo y título */}
+      <div className="text-center py-10">
         <img
           src="/logo.png"
           alt="VoltGo Logo"
           className="mx-auto mb-6 w-56"
         />
-
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-3xl font-bold mb-4">
           Mobile EV Charging & Roadside Assistance
         </h1>
-
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl mb-8">
+        <p className="text-lg mb-6">
           Fast, safe and reliable EV charging and roadside support wherever you need it.
         </p>
 
-        {/* Buttons */}
-        <div className="flex justify-center space-x-4">
+        {/* Botones principales */}
+        <div className="flex justify-center gap-4 mb-10">
           <a
             href="/roadside"
             className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold"
@@ -43,15 +41,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="py-12 bg-blue-600">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
-          Services
-        </h2>
+      {/* Sección de servicios */}
+      <div className="bg-blue-600 py-12">
+        <h2 className="text-2xl font-bold text-center mb-10">Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+          
           {/* Emergency */}
           <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
-            <div className="text-red-500 text-4xl mb-4">⚡</div>
+            <FaBolt className="text-red-500 text-4xl mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Emergency</h3>
             <p className="mb-4">
               Out of range or stuck roadside? We dispatch mobile fast charging ASAP.
@@ -66,7 +63,7 @@ export default function Home() {
 
           {/* On-Demand */}
           <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
-            <div className="text-blue-500 text-4xl mb-4">🔋</div>
+            <FaChargingStation className="text-blue-500 text-4xl mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">On-Demand</h3>
             <p className="mb-4">
               Book a one-time charge at home, work or anywhere in our coverage area.
@@ -81,10 +78,10 @@ export default function Home() {
 
           {/* Subscription */}
           <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
-            <div className="text-yellow-500 text-4xl mb-4">📦</div>
+            <FaBox className="text-yellow-500 text-4xl mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Subscription</h3>
             <p className="mb-4">
-              VoltGo Pass $59/month → 2 × 15 kWh  
+              VoltGo Pass $59/month → 2 × 15 kWh <br />
               VoltGo Pro $119/month → 4 × 20 kWh
             </p>
             <a

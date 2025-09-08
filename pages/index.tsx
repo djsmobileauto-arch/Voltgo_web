@@ -1,119 +1,101 @@
 export default function Home() {
   return (
-    <div className="bg-blue-600 min-h-screen">
-      {/* HERO */}
-      <header className="text-center text-white py-16">
-        <h1 className="text-4xl font-extrabold mb-3">
+    <div className="bg-blue-600 min-h-screen text-white">
+      {/* Hero Section */}
+      <div className="text-center py-16">
+        {/* Logo */}
+        <img
+          src="/logo.png"
+          alt="VoltGo Logo"
+          className="mx-auto mb-6 w-56"
+        />
+
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Mobile EV Charging & Roadside Assistance
         </h1>
-        <p className="text-lg opacity-90 mb-8">
-          Fast, safe and reliable EV charging wherever you need it.
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl mb-8">
+          Fast, safe and reliable EV charging and roadside support wherever you need it.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        {/* Buttons */}
+        <div className="flex justify-center space-x-4">
           <a
             href="/roadside"
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md"
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold"
           >
             Emergency Help Now
           </a>
-
           <a
             href="/services"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold"
           >
             Schedule a Charge
           </a>
-
-          {/* GOLD button */}
           <a
             href="/pricing"
-            className="font-semibold px-6 py-3 rounded-lg shadow-md"
-            style={{ backgroundColor: '#FFD700', color: '#0f172a' }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#E6C200')}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#FFD700')}
+            className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold"
           >
             Membership Plans
           </a>
         </div>
-      </header>
+      </div>
 
-      {/* SERVICES SECTION */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-8 pb-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-2">
+      {/* Services Section */}
+      <div className="py-12 bg-blue-600">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
           Services
         </h2>
-        <p className="text-center text-sm text-gray-200 mb-10">
-          Two paths: immediate emergency help or scheduled charging — plus memberships.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Emergency card */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-50">
-                <svg className="h-6 w-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" />
-                </svg>
-              </span>
-              <h3 className="text-xl font-semibold text-blue-600">Emergency</h3>
-            </div>
-            <p className="mb-5">
-              Out of range or stuck roadside? We dispatch mobile DC fast charge, ASAP.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+          {/* Emergency */}
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
+            <div className="text-red-500 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold mb-2">Emergency</h3>
+            <p className="mb-4">
+              Out of range or stuck roadside? We dispatch mobile fast charging ASAP.
             </p>
             <a
               href="/roadside"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold"
             >
               Request Emergency
             </a>
           </div>
 
-          {/* On-Demand card */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50">
-                <svg className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M7 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v2h20V6a2 2 0 0 0-2-2h-2V3a1 1 0 1 0-2 0v1H8V3a1 1 0 0 0-1-1zM22 10H2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8zm-5 3h-4v4h4v-4z"/>
-                </svg>
-              </span>
-              <h3 className="text-xl font-semibold text-blue-600">On-Demand</h3>
-            </div>
-            <p className="mb-5">
+          {/* On-Demand */}
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
+            <div className="text-blue-500 text-4xl mb-4">🔋</div>
+            <h3 className="text-xl font-bold mb-2">On-Demand</h3>
+            <p className="mb-4">
               Book a one-time charge at home, work or anywhere in our coverage area.
             </p>
             <a
               href="/services"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
             >
               Request Online
             </a>
           </div>
 
-          {/* Subscription card */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-50">
-                <svg className="h-6 w-6 text-amber-600" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 7.1-1.1L12 2z"/>
-                </svg>
-              </span>
-              <h3 className="text-xl font-semibold text-blue-600">Subscription</h3>
-            </div>
-            <p className="mb-1"><strong>VoltGo Pass:</strong> $59/month — 2 × 15 kWh + 1 roadside service</p>
-            <p className="mb-5"><strong>VoltGo Pro:</strong> $119/month — 4 × 20 kWh + 2 roadside services</p>
+          {/* Subscription */}
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center text-gray-800">
+            <div className="text-yellow-500 text-4xl mb-4">📦</div>
+            <h3 className="text-xl font-bold mb-2">Subscription</h3>
+            <p className="mb-4">
+              VoltGo Pass $59/month → 2 × 15 kWh  
+              VoltGo Pro $119/month → 4 × 20 kWh
+            </p>
             <a
               href="/pricing"
-              className="inline-block px-4 py-2 rounded-lg font-semibold"
-              style={{ backgroundColor: '#FFD700', color: '#0f172a' }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#E6C200')}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#FFD700')}
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold"
             >
               View Plans
             </a>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

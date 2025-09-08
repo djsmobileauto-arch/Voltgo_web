@@ -1,4 +1,4 @@
-mport React from "react";
+import React from "react";
 
 /* === Inline SVG icons (sin dependencias) === */
 const IconBolt = (props: React.SVGProps<SVGSVGElement>) => (

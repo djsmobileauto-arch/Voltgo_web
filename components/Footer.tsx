@@ -1,60 +1,41 @@
-// components/Footer.tsx
-export default function Footer() {
-  return (
-    <footer className="border-t border-slate-200 bg-volt-blue text-white">
-      <div className="max-w-6xl mx-auto px-4 py-10 text-sm">
-        {/* Fila superior: logo + copyright */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo-voltgo.png"
-              alt="VoltGo"
-              className="h-8 w-auto"
-            />
-          </div>
+<footer className="bg-blue-700 text-gray-200 py-10 mt-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* Columna 1 */}
+    <div>
+      <h4 className="text-white font-semibold mb-3">Company</h4>
+      <ul className="space-y-2 text-sm">
+        <li><a href="/services" className="hover:text-yellow-400">Services</a></li>
+        <li><a href="/coverage" className="hover:text-yellow-400">Coverage</a></li>
+        <li><a href="/contact" className="hover:text-yellow-400">Contact</a></li>
+        <li><a href="/about" className="hover:text-yellow-400">About</a></li>
+      </ul>
+    </div>
 
-          {/* Copyright */}
-          <div className="text-white text-sm">
-            © {new Date().getFullYear()} VoltGo. All rights reserved.
-          </div>
-        </div>
+    {/* Columna 2 */}
+    <div>
+      <h4 className="text-white font-semibold mb-3">Legal</h4>
+      <ul className="space-y-2 text-sm">
+        <li><a href="/terms" className="hover:text-yellow-400">Terms</a></li>
+        <li><a href="/privacy" className="hover:text-yellow-400">Privacy</a></li>
+        <li><a href="/cookies" className="hover:text-yellow-400">Cookie Policy</a></li>
+      </ul>
+    </div>
 
-        {/* Secciones de enlaces */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8">
-          <div>
-            <div className="font-semibold mb-2">Company</div>
-            <ul className="space-y-2 opacity-90">
-              <li><a href="/services" className="hover:underline">Services</a></li>
-              <li><a href="/coverage" className="hover:underline">Coverage</a></li>
-              <li><a href="/contact" className="hover:underline">Contact</a></li>
-              <li><a href="/about" className="hover:underline">About</a></li>
-            </ul>
-          </div>
+    {/* Columna 3 */}
+    <div>
+      <h4 className="text-white font-semibold mb-3">Apps</h4>
+      <ul className="space-y-2 text-sm">
+        <li><a href="/driver" className="hover:text-yellow-400">VoltGo Driver (internal)</a></li>
+        <li><a href="/user" className="hover:text-yellow-400">VoltGo User (coming soon)</a></li>
+      </ul>
+    </div>
+  </div>
 
-          <div>
-            <div className="font-semibold mb-2">Legal</div>
-            <ul className="space-y-2 opacity-90">
-              <li><a href="/terms" className="hover:underline">Terms</a></li>
-              <li><a href="/privacy" className="hover:underline">Privacy</a></li>
-              <li><a href="/cookies" className="hover:underline">Cookie Policy</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="font-semibold mb-2">Apps</div>
-            <ul className="space-y-2 opacity-90">
-              <li><span>VoltGo Driver (internal)</span></li>
-              <li><span>VoltGo User (coming soon)</span></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Información legal corporativa */}
-        <div className="mt-8 text-xs text-gray-200">
-          VoltGo is the commercial brand powered by <strong>DJ’S Mobile Auto Solutions LLC</strong> — Walligford, CT 06492, United States. D-U-N-S: 136807155.
-        </div>
-      </div>
-    </footer>
-  );
-}
+  {/* Separador */}
+  <div className="border-t border-gray-500 mt-8 pt-6 text-center">
+    <p className="text-sm">&copy; 2025 VoltGo. All rights reserved.</p>
+    <p className="text-xs text-gray-400 mt-2">
+      VoltGo is the commercial brand powered by DJ’S Mobile Auto Solutions LLC · Wallingford, CT · D-U-N-S: 136407155.
+    </p>
+  </div>
+</footer>

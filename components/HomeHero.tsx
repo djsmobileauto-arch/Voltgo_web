@@ -2,7 +2,7 @@
 
 export default function HomeHero() {
   return (
-    <section className="bg-blue-700 text-center text-white pt-14 md:pt-20 pb-16">
+    <section className="bg-blue-700 text-center text-white pt-14 md:pt-20">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Logo */}
@@ -45,7 +45,7 @@ export default function HomeHero() {
         </div>
 
         {/* Tarjetas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-14">
           
           {/* Emergency */}
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">

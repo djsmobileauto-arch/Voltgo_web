@@ -2,7 +2,8 @@
 
 export default function HomeHero() {
   return (
-    <section className="bg-blue-700 text-center text-white pt-14 md:pt-20 pb-16">
+    <section className="bg-blue-700 text-center text-white pt-24 md:pt-32 pb-10">
+
       <div className="max-w-4xl mx-auto px-4">
 
         {/* Logo */}

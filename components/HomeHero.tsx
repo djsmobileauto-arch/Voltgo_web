@@ -9,7 +9,7 @@ export default function HomeHero() {
         <img
           src="/voltgo-logo-final.png"
           alt="VoltGo Logo"
-          className="mx-auto mb-12 w-48 md:w-56"
+          className="mx-auto mb-12 w-64 md:w-72"  // AUMENTADO
         />
 
         {/* Título */}

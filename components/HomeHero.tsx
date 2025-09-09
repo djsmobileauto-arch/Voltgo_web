@@ -5,12 +5,12 @@ export default function HomeHero() {
     <section className="bg-blue-700 text-center text-white pt-14 md:pt-20">
       <div className="max-w-6xl mx-auto px-4">
         
-        {/* Logo */}
-        <img 
-          src="/logo-voltgo.png" 
-          alt="VoltGo Logo" 
-          className="mx-auto mb-4 w-24 md:w-32"
-        />
+        <img
+  src="/logo-voltgo.png"
+  alt="VoltGo Logo"
+  className="mx-auto mb-4 w-24 md:w-32"
+/>
+
 
         {/* Título */}
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-3">

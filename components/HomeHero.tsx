@@ -2,30 +2,28 @@
 
 export default function HomeHero() {
   return (
-    <section className="bg-blue-700 text-center text-white pt-24 md:pt-32 pb-10">
-
+    <section className="bg-blue-700 text-center text-white pt-24 md:pt-32 pb-12">
       <div className="max-w-4xl mx-auto px-4">
 
         {/* Logo */}
         <img
-  src="/voltgo-logo-final.png"
-  alt="VoltGo Logo"
-  className="mx-auto mb-10 w-40 md:w-56"
-/>
-
+          src="/voltgo-logo-final.png"
+          alt="VoltGo Logo"
+          className="mx-auto mb-12 w-48 md:w-56"
+        />
 
         {/* Título */}
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
           Mobile EV Charging & Roadside Assistance
         </h1>
 
         {/* Subtítulo */}
-        <p className="text-lg text-gray-100 mb-8">
+        <p className="text-lg text-gray-100 mb-10">
           Fast, safe and reliable EV charging and roadside support whenever you need it.
         </p>
 
         {/* Botones CTA */}
-        <div className="flex justify-center space-x-4 mb-12">
+        <div className="flex justify-center space-x-4 mb-16">
           <a
             href="/emergency"
             className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white font-medium shadow-md"

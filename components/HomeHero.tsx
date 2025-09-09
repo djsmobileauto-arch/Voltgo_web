@@ -7,7 +7,7 @@ export default function HomeHero() {
         
         <img
   src="/logo-voltgo.png"
-  alt="voltGo logo"
+  alt="voltgo logo"
   className="mx-auto mb-4 w-24 md:w-32"
 />
 

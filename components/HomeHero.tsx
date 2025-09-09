@@ -1,55 +1,65 @@
-import Link from "next/link";
-import Image from "next/image";
+<section className="bg-blue-700 text-center text-white pt-14 md:pt-20 pb-16">
+  <div className="max-w-6xl mx-auto px-4">
+    {/* Logo */}
+    <img 
+      src="/logo-voltgo.png" 
+      alt="VoltGo Logo" 
+      className="mx-auto mb-4 w-24 md:w-32"
+    />
 
-export default function HomeHero() {
-  return (
-    <section className="bg-[var(--volt-blue)] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-16 text-center">
-        {/* Logo grande centrado */}
-        <Image
-          src="/logo-voltgo.png"
-          alt="VoltGo Logo"
-          width={360}  // subí a 400–440 si querés aún más grande
-          height={140}
-          priority
-          className="mx-auto mb-6"
-        />
+    {/* Título */}
+    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-3">
+      Mobile EV Charging & Roadside Assistance
+    </h1>
 
-        {/* Título / subtítulo */}
-        <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
-          Mobile EV Charging & Roadside Assistance
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm md:text-base text-blue-100">
-          Fast, safe and reliable EV charging wherever you need it.
+    {/* Subtítulo */}
+    <p className="text-lg text-gray-100 mb-8">
+      Fast, safe and reliable EV charging and roadside support whenever you need it.
+    </p>
+
+    {/* Botones */}
+    <div className="flex justify-center space-x-4 mb-12">
+      <a href="/emergency" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white font-medium shadow-md">
+        Emergency Help Now
+      </a>
+      <a href="/schedule" className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white font-medium shadow-md">
+        Schedule a Charge
+      </a>
+      <a href="/plans" className="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 rounded-lg text-black font-medium shadow-md">
+        Membership Plans
+      </a>
+    </div>
+
+    {/* Tarjetas */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 className="font-semibold mb-2 text-gray-900">Emergency</h3>
+        <p className="text-sm mb-3 text-gray-700">
+          Out of range or stuck roadside? We dispatch mobile fast charging ASAP.
         </p>
-
-        {/* Botones */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="tel:+18334VOLTGO"
-            aria-label="Emergency Help Now"
-            className="inline-flex items-center justify-center rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-green-700"
-          >
-            Emergency Help Now
-          </a>
-
-          <Link
-            href="/schedule"
-            aria-label="Schedule a Charge"
-            className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-blue-600"
-          >
-            Schedule a Charge
-          </Link>
-
-          <Link
-            href="/pricing"
-            aria-label="Membership Plans"
-            className="inline-flex items-center justify-center rounded-md bg-yellow-500 px-4 py-2 text-sm font-semibold text-black shadow-soft transition hover:bg-yellow-600"
-          >
-            Membership Plans
-          </Link>
-        </div>
+        <a href="/emergency" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+          Request Emergency
+        </a>
       </div>
-    </section>
-  );
-}
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 className="font-semibold mb-2 text-gray-900">On-Demand</h3>
+        <p className="text-sm mb-3 text-gray-700">
+          Book a one-time charge at home, work, or anywhere in our coverage area.
+        </p>
+        <a href="/schedule" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+          Request Online
+        </a>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 className="font-semibold mb-2 text-gray-900">Subscription</h3>
+        <p className="text-sm mb-3 text-gray-700">
+          VoltGo Pass $59/month → 2 × 15 kWh<br />
+          VoltGo Pro $119/month → 4 × 20 kWh
+        </p>
+        <a href="/plans" className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded">
+          View Plans
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -7,10 +7,11 @@ export default function HomeHero() {
 
         {/* Logo */}
         <img
-          src="/voltgo-logo-final.png"
-          alt="VoltGo Logo"
-          className="mx-auto mb-6 w-32 md:w-40"
-        />
+  src="/voltgo-logo-final.png"
+  alt="VoltGo Logo"
+  className="mx-auto mb-10 w-40 md:w-56"
+/>
+
 
         {/* Título */}
         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">

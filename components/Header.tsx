@@ -2,19 +2,27 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-blue-600">
-      {/* Logo */}
+    <header className="flex items-center justify-between px-6 py-4 bg-blue-700">
+      {/* Logo corregido */}
       <div className="flex items-center">
         <Image
           src="/voltgo-logo-final.png"
           alt="VoltGo Logo"
-          width={220}   // puedes subir a 240 si quieres más grande
+          width={220}  // tamaño más grande y visible
           height={70}
           priority
         />
       </div>
-
-      {/* Aquí puedes mantener tu nav o lo que tengas */}
+      {/* Menú de navegación */}
+      <nav className="flex space-x-6 text-white font-medium">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/roadside">Roadside</a>
+        <a href="/app">App</a>
+        <a href="/subscribe">Subscribe</a>
+        <a href="/contact">Contact</a>
+        <a href="/pricing">Pricing</a>
+      </nav>
     </header>
   );
 }

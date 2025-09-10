@@ -1,10 +1,9 @@
-// components/HomeHero.tsx
 export default function HomeHero() {
   return (
     <section className="bg-blue-700 text-center text-white pt-16 pb-12">
       {/* Logo */}
       <img
-        src="/voltgo-logo-final.png"
+        src="/voltgo-logo-final.png"   // ✅ misma ruta que el Header
         alt="VoltGo Logo"
         className="mx-auto mb-6 w-56 md:w-64"
       />
@@ -22,19 +21,19 @@ export default function HomeHero() {
       {/* Botones */}
       <div className="flex justify-center space-x-4 mb-12">
         <a
-          href="/services"
+          href="/emergency"
           className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white font-semibold shadow-md"
         >
           Emergency Help Now
         </a>
         <a
-          href="/services"
+          href="/schedule"
           className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold shadow-md"
         >
           Schedule a Charge
         </a>
         <a
-          href="/services"
+          href="/plans"
           className="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 rounded-lg text-black font-semibold shadow-md"
         >
           Membership Plans

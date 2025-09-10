@@ -6,9 +6,9 @@ export default function Header() {
       {/* Logo corregido */}
       <div className="flex items-center">
         <Image
-          src="/voltgo-logo-final.png"   // ✅ ruta correcta desde /public
+          src="/voltgo-logo-final.png"   // ✅ asegúrate de que este archivo esté en /public
           alt="VoltGo Logo"
-          width={220}                    // tamaño ajustable
+          width={220}                   // ajusta tamaño
           height={70}
           priority
         />

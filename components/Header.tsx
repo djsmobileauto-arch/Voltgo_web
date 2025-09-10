@@ -6,13 +6,14 @@ export default function Header() {
       {/* Logo corregido */}
       <div className="flex items-center">
         <Image
-          src="/voltgo-logo-final.png"
+          src="/voltgo-logo-final.png"   // ✅ ruta correcta desde /public
           alt="VoltGo Logo"
-          width={220}  // tamaño más grande y visible
+          width={220}                    // tamaño ajustable
           height={70}
           priority
         />
       </div>
+
       {/* Menú de navegación */}
       <nav className="flex space-x-6 text-white font-medium">
         <a href="/">Home</a>

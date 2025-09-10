@@ -1,5 +1,4 @@
 // pages/index.tsx
-
 import HomeHero from "../components/HomeHero";
 
 export default function Home() {
@@ -20,8 +19,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 className="font-semibold mb-2 text-gray-900">Emergency</h3>
               <p className="text-sm mb-3 text-gray-700">
-                Out of range or stuck roadside? We dispatch mobile fast charging
-                ASAP.
+                Out of range or stuck roadside? We dispatch mobile fast charging ASAP.
               </p>
               <a
                 href="/emergency"
@@ -35,8 +33,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 className="font-semibold mb-2 text-gray-900">On-Demand</h3>
               <p className="text-sm mb-3 text-gray-700">
-                Book a one-time charge at home, work, or anywhere in our coverage
-                area.
+                Book a one-time charge at home, work, or anywhere in our coverage area.
               </p>
               <a
                 href="/schedule"

@@ -6,10 +6,10 @@ export default function Header() {
       {/* Logo corregido */}
       <div className="flex items-center">
         <Image
-          src="/voltgo-logo-final.png"   // asegúrate de que esté en /public
+          src="/voltgo-logo-final.png"   // archivo en /public
           alt="VoltGo Logo"
-          width={200}                    // ancho ajustable
-          height={70}                    // alto ajustable
+          width={220}                   // ajusta tamaño
+          height={70}
           priority
         />
       </div>

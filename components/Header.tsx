@@ -1,12 +1,16 @@
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-blue-700">
-      {/* Logo corregido con <img> clásico */}
+      {/* Logo */}
       <div className="flex items-center">
-        <img
-          src="/voltgo-logo-final.png"   // ✅ ubicado en /public
+        <Image
+          src="/voltgo-logo-final.png"   // ✅ misma ruta que el Hero
           alt="VoltGo Logo"
-          className="h-16 w-auto"        // altura fija y ancho automático
+          width={220}                   
+          height={70}
+          priority
         />
       </div>
 

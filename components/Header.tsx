@@ -1,17 +1,25 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
+  const [logoError, setLogoError] = useState(false);
+
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-blue-700">
-      {/* Logo corregido */}
+      {/* Logo con fallback */}
       <div className="flex items-center">
-        <Image
-          src="/voltgo-logo-final.png"   // archivo en /public
-          alt="VoltGo Logo"
-          width={220}                   // ajusta tamaño
-          height={70}
-          priority
-        />
+        {!logoError ? (
+          <Image
+            src="/voltgo-logo-final.png"
+            alt="VoltGo Logo"
+            width={220}
+            height={70}
+            priority
+            onError={() => setLogoError(true)} // si falla la carga, activa fallback
+          />
+        ) : (
+          <span className="text-white text-2xl font-bold">VoltGo</span>
+        )}
       </div>
 
       {/* Menú de navegación */}

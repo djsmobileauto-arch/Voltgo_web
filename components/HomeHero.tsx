@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-blue-700">
-      <div className="container mx-auto px-4 pt-10 md:pt-12 pb-10 text-center">
+      <div className="container mx-auto px-4 pt-16 md:pt-20 pb-10 text-center">
         {/* LOGO */}
         <Image
           src="/voltgo-logo-final.png"
@@ -21,7 +21,7 @@ export default function Hero() {
           Mobile EV Charging & Roadside Assistance
         </h1>
 
-        {/* SUBTÍTULO opcional */}
+        {/* SUBTÍTULO */}
         <p className="mt-3 text-lg md:text-xl text-white/90">
           Fast, safe and reliable EV charging and roadside support whenever you need it.
         </p>

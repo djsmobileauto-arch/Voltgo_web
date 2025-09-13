@@ -14,8 +14,8 @@ export default function Navbar() {
   <img
     src="/us-flag.png"
     alt="USA Flag"
-    width={120}     // ancho mayor
-    height={70}    // alto proporcional
+    width={130}     // ancho mayor
+    height={80}    // alto proporcional
     className="rounded-sm shadow"
   />
 </div>

@@ -1,43 +1,52 @@
-export default function HomeHero() {
+"use client";
+
+import Image from "next/image";
+
+export default function Hero() {
   return (
-    <section className="bg-blue-700 text-center text-white pt-16 pb-12">
-      {/* Logo */}
-      <img
-        src="/voltgo-logo-final.png"   // ✅ misma ruta que el Header
-        alt="VoltGo Logo"
-        className="mx-auto mb-6 w-56 md:w-64"
-      />
+    <section className="bg-blue-700">
+      <div className="container mx-auto px-4 pt-10 md:pt-12 pb-10 text-center">
+        {/* LOGO */}
+        <Image
+          src="/voltgo-logo-final.png"
+          alt="VoltGo — Charge on the Go"
+          priority
+          className="mx-auto block h-auto
+                     w-48              /* base mobile */
+                     md:w-60 lg:w-64 xl:w-72"  /* ≈ +20% en desktop */
+        />
 
-      {/* Título */}
-      <h1 className="text-3xl md:text-5xl font-extrabold mb-3">
-        Mobile EV Charging & Roadside Assistance
-      </h1>
+        {/* TITULAR */}
+        <h1 className="mt-3 md:mt-2 text-white text-3xl md:text-5xl font-extrabold">
+          Mobile EV Charging & Roadside Assistance
+        </h1>
 
-      {/* Subtítulo */}
-      <p className="text-lg text-gray-100 mb-8">
-        Fast, safe and reliable EV charging and roadside support whenever you need it.
-      </p>
+        {/* SUBTÍTULO opcional */}
+        <p className="mt-3 text-lg md:text-xl text-white/90">
+          Fast, safe and reliable EV charging and roadside support whenever you need it.
+        </p>
 
-      {/* Botones */}
-      <div className="flex justify-center space-x-4 mb-12">
-        <a
-          href="/emergency"
-          className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white font-semibold shadow-md"
-        >
-          Emergency Help Now
-        </a>
-        <a
-          href="/schedule"
-          className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold shadow-md"
-        >
-          Schedule a Charge
-        </a>
-        <a
-          href="/plans"
-          className="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 rounded-lg text-black font-semibold shadow-md"
-        >
-          Membership Plans
-        </a>
+        {/* BOTONES CTA */}
+        <div className="mt-5 md:mt-6 flex justify-center gap-3 flex-wrap">
+          <a
+            href="#emergency"
+            className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded font-semibold"
+          >
+            Emergency Help Now
+          </a>
+          <a
+            href="#schedule"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded font-semibold"
+          >
+            Schedule a Charge
+          </a>
+          <a
+            href="#plans"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-3 rounded font-semibold"
+          >
+            Membership Plans
+          </a>
+        </div>
       </div>
     </section>
   );

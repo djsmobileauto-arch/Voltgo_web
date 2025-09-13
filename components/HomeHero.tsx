@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -28,24 +29,23 @@ export default function Hero() {
 
         {/* BOTONES CTA */}
         <div className="mt-5 md:mt-6 flex justify-center gap-3 flex-wrap">
-          <a
-            href="#emergency"
-            className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded font-semibold"
-          >
-            Emergency Help Now
-          </a>
-          <a
-            href="#schedule"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded font-semibold"
-          >
-            Schedule a Charge
-          </a>
-          <a
-            href="#plans"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-3 rounded font-semibold"
-          >
-            Membership Plans
-          </a>
+          <Link href="/roadside">
+            <span className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded font-semibold cursor-pointer">
+              Emergency Help Now
+            </span>
+          </Link>
+
+          <Link href="/schedule">
+            <span className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded font-semibold cursor-pointer">
+              Schedule a Charge
+            </span>
+          </Link>
+
+          <Link href="/pricing">
+            <span className="bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-3 rounded font-semibold cursor-pointer">
+              Membership Plans
+            </span>
+          </Link>
         </div>
       </div>
     </section>

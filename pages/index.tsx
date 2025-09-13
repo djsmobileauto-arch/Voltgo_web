@@ -44,21 +44,23 @@ export default function Home() {
                 Request Online
               </a>
             </div>
+{/* Corporate / Fleet Solutions Card */}
+<div className="bg-white p-6 rounded-lg shadow-lg text-center">
+  <h3 className="font-semibold mb-2 text-gray-900">Corporate Solutions</h3>
+  <p className="text-sm mb-3 text-gray-700">
+    Power your fleet with VoltGo. Tailored plans for companies, ride-sharing,
+    and delivery services that need reliable on-demand EV charging and roadside
+    support.
+  </p>
+  <a
+    href="/fleet"
+    className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded"
+  >
+    Learn More
+  </a>
+</div>
 
-            {/* Subscription Card */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="font-semibold mb-2 text-gray-900">Subscription</h3>
-              <p className="text-sm mb-3 text-gray-700">
-                VoltGo Pass $59/month → 2 × 15 kWh <br />
-                VoltGo Pro $119/month → 4 × 20 kWh
-              </p>
-              <a
-                href="/plans"
-                className="bg-yellow-500 text-black px-4 py-2 rounded"
-              >
-                View Plans
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>

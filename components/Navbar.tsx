@@ -11,14 +11,17 @@ export default function Navbar() {
 
           {/* Bandera izquierda */}
 <div className="flex items-center justify-start w-24">
+  {/* Bandera izquierda */}
+<div className="flex items-center justify-start ml-[-96px]">
   <img
     src="/us-flag.png"
     alt="USA Flag"
-    width={170}     // ancho mayor
-    height={120}    // alto proporcional
+    width={120}
+    height={72}
     className="rounded-sm shadow"
   />
 </div>
+
 
 
           {/* Links centrados */}

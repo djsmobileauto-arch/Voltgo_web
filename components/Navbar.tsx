@@ -10,15 +10,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
 
           {/* Bandera izquierda */}
-          <div className="flex items-center">
-            <img
-              src="/us-flag.png"
-              alt="USA Flag"
-              width={36}
-              height={24}
-              className="rounded-sm shadow"
-            />
-          </div>
+<div className="flex items-center justify-start w-24">
+  <img
+    src="/us-flag.png"
+    alt="USA Flag"
+    width={60}     // ancho mayor
+    height={40}    // alto proporcional
+    className="rounded-sm shadow"
+  />
+</div>
+
 
           {/* Links centrados */}
           <nav className="flex-1 flex justify-center space-x-8">

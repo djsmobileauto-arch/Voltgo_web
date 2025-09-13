@@ -2,7 +2,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -12,8 +11,8 @@ export default function Navbar() {
 
           {/* Bandera izquierda */}
           <div className="flex items-center">
-            <Image
-              src="/usa-flag.png"
+            <img
+              src="/us-flag.png"
               alt="USA Flag"
               width={36}
               height={24}

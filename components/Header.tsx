@@ -1,31 +1,26 @@
-// components/Header.tsx
-"use client";
-
-import Image from "next/image";
-import Navbar from "./Navbar";
-
 export default function Header() {
   return (
-    <header className="bg-blue-700 shadow-md fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-
-          {/* Bandera izquierda */}
-          <div className="flex items-center">
-            <Image
-              src="/usa-flag.png"
-              alt="USA Flag"
-              width={36}
-              height={24}
-              className="rounded-sm shadow"
-            />
-          </div>
-
-          {/* Navbar centrado con botón integrado */}
-          <Navbar />
-
-        </div>
+    <header className="flex items-center justify-between px-6 py-4 bg-blue-700">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img
+          src="/voltgo-logo-final.png"
+          alt="VoltGo Logo"
+          width="220"
+          height="70"
+        />
       </div>
+
+      {/* Menú de navegación */}
+      <nav className="flex space-x-6 text-white font-medium">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/roadside">Roadside</a>
+        <a href="/app">App</a>
+        <a href="/subscribe">Subscribe</a>
+        <a href="/contact">Contact</a>
+        <a href="/pricing">Pricing</a>
+      </nav>
     </header>
   );
 }

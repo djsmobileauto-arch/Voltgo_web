@@ -20,13 +20,15 @@ export default function Home() {
               <h3 className="font-semibold mb-2 text-gray-900">Emergency</h3>
               <p className="text-sm mb-3 text-gray-700">
                 Out of range or stuck roadside? We dispatch mobile fast charging ASAP.
-              </p>
-              <a
-                href="/emergency"
-                className="bg-green-600 text-white px-3 py-1 rounded"
-              >
-                Request Emergency
-              </a>
+     </p>
+<a
+  href="tel:18334865846"
+  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+>
+  Request Emergency
+</a>
+ 
+
             </div>
 
             {/* On-Demand Card */}

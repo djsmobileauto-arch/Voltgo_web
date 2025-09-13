@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 export default function Header() {
   return (
@@ -12,12 +13,17 @@ export default function Header() {
           {/* Bandera izquierda */}
           <div className="flex items-center">
             <Image
-              src="/usa-flag.png"
+              src="/usa-flag.png"   // archivo en /public/usa-flag.png
               alt="USA Flag"
               width={36}
               height={24}
               className="rounded-sm shadow"
             />
+          </div>
+
+          {/* Menú centro */}
+          <div className="flex-1 flex justify-center">
+            <Navbar />
           </div>
 
           {/* Botón verde derecha */}

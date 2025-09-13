@@ -30,10 +30,10 @@ export default function Hero() {
         {/* BOTONES CTA */}
         <div className="mt-5 md:mt-6 flex justify-center gap-3 flex-wrap">
           <Link href="/roadside">
-            <span className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded font-semibold cursor-pointer">
-              Emergency Help Now
-            </span>
-          </Link>
+  <span className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded font-semibold cursor-pointer">
+    Roadside Assistance
+  </span>
+</Link>
 
           <Link href="/schedule">
             <span className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded font-semibold cursor-pointer">

@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between w-full">
+    <div className="flex items-center justify-center flex-1 relative">
       {/* Links centrados */}
-      <nav className="flex flex-1 justify-center space-x-8">
+      <nav className="flex space-x-8">
         <Link href="/" className="text-white hover:text-gray-200">Home</Link>
         <Link href="/services" className="text-white hover:text-gray-200">Services</Link>
         <Link href="/roadside" className="text-white hover:text-gray-200">Roadside</Link>
@@ -17,11 +17,11 @@ export default function Navbar() {
         <Link href="/pricing" className="text-white hover:text-gray-200">Pricing</Link>
       </nav>
 
-      {/* Botón verde derecha */}
-      <div className="flex-shrink-0 ml-4">
+      {/* Botón verde alineado a la derecha dentro del Navbar */}
+      <div className="absolute right-0">
         <a
           href="tel:18334865846"
-          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
         >
           1-833-4VOLTGO
         </a>

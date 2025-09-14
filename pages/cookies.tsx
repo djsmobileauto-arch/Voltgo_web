@@ -52,7 +52,7 @@ export default function CookiePolicy() {
         </p>
         <p className="text-gray-700 mt-2">
           📧 <a href="mailto:info@voltgo.us" className="text-blue-600 hover:underline">info@voltgo.us</a><br />
-          📍 131 Knollwood Dr, Wallingford, CT 06492, USA
+          📍  Wallingford, CT 06492, USA
         </p>
       </div>
     </div>

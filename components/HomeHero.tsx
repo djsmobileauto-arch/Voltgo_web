@@ -9,13 +9,14 @@ export default function Hero() {
       <div className="container mx-auto px-4 pt-16 md:pt-20 pb-10 text-center">
         {/* LOGO */}
         <Image
-          src="/voltgo-logo-final.png"
-          alt="VoltGo — Charge on the Go"
-          priority
-          className="mx-auto block h-auto
-                     w-48              /* base mobile */
-                     md:w-60 lg:w-64 xl:w-72"  /* ≈ +20% en desktop */
-        />
+  src="/voltgo-logo-final.png"
+  alt="VoltGo – Charge on the Go"
+  width={2139}
+  height={947}
+  priority
+  className="mx-auto block h-auto w-48 md:w-60 lg:w-64 xl:w-72"
+/>
+
 
         {/* TITULAR */}
         <h1 className="mt-3 md:mt-2 text-white text-3xl md:text-5xl font-extrabold">

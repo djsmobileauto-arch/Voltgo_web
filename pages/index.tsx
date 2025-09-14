@@ -1,5 +1,6 @@
 // pages/index.tsx
 import HomeHero from "../components/HomeHero";
+import Coverage from "../components/Coverage";
 
 export default function Home() {
   return (
@@ -63,7 +64,9 @@ export default function Home() {
             
           </div>
         </div>
-      </section>
-    </div>
+      </section> 
+    {/* Coverage Section */}
+<Coverage />
+</div>
   );
 }

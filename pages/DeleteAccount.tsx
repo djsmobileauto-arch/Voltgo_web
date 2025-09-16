@@ -2,9 +2,9 @@ import React from "react";
 
 export default function DeleteAccount() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-400 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 to-cyan-400 p-6">
       <div className="bg-white max-w-2xl p-8 rounded-2xl shadow-lg text-gray-800">
-        <h1 className="text-2xl font-bold text-blue-600 text-center mb-4">
+        <h1 className="text-2xl font-bold text-blue-700 text-center mb-4">
           Delete Account Request
         </h1>
 
@@ -16,7 +16,7 @@ export default function DeleteAccount() {
           📧{" "}
           <a
             href="mailto:support@voltgo.us"
-            className="text-blue-600 underline"
+            className="text-blue-700 underline"
           >
             support@voltgo.us
           </a>
@@ -46,7 +46,7 @@ export default function DeleteAccount() {
             href="https://voltgo.us/privacy-policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline"
+            className="text-blue-700 underline"
           >
             Privacy Policy
           </a>

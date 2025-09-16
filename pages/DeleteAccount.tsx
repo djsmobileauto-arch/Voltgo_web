@@ -2,9 +2,9 @@ import React from "react";
 
 export default function DeleteAccount() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 to-cyan-400 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-blue-700 p-6">
       <div className="bg-white max-w-2xl p-8 rounded-2xl shadow-lg text-gray-800">
-        <h1 className="text-2xl font-bold text-blue-700 text-center mb-4">
+        <h1 className="text-2xl font-bold text-blue-600 text-center mb-4">
           Delete Account Request
         </h1>
 
@@ -16,15 +16,14 @@ export default function DeleteAccount() {
           📧{" "}
           <a
             href="mailto:support@voltgo.us"
-            className="text-blue-700 underline"
+            className="text-blue-600 underline"
           >
             support@voltgo.us
           </a>
         </p>
 
         <p className="mb-3">
-          When your account is deleted, the following information will also be
-          removed from our systems:
+          When your account is deleted, the following information will also be removed from our systems:
         </p>
         <ul className="list-disc list-inside mb-6">
           <li>Name and contact details (email, phone number)</li>
@@ -35,9 +34,7 @@ export default function DeleteAccount() {
         </ul>
 
         <p className="mb-4">
-          ⚠️ Please note: VoltGo does <strong>not</strong> support partial
-          deletion of data (e.g., deleting only certain messages or photos). The
-          only available option is <strong>full account deletion</strong>.
+          ⚠️ Please note: VoltGo does <strong>not</strong> support partial deletion of data (e.g., deleting only certain messages or photos). The only available option is <strong>full account deletion</strong>.
         </p>
 
         <p className="mb-2">
@@ -46,11 +43,10 @@ export default function DeleteAccount() {
             href="https://voltgo.us/privacy-policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 underline"
+            className="text-blue-600 underline"
           >
             Privacy Policy
-          </a>
-          .
+          </a>.
         </p>
 
         <p className="font-semibold text-center">

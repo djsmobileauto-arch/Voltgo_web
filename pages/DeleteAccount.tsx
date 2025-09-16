@@ -13,12 +13,19 @@ export default function DeleteAccount() {
         </p>
 
         <p className="mb-6 text-center">
-          📧 <a href="mailto:support@voltgo.us" className="text-blue-600 underline">
+          📧{" "}
+          <a
+            href="mailto:support@voltgo.us"
+            className="text-blue-600 underline"
+          >
             support@voltgo.us
           </a>
         </p>
 
-        <p className="mb-3">When your account is deleted, the following information will also be removed from our systems:</p>
+        <p className="mb-3">
+          When your account is deleted, the following information will also be
+          removed from our systems:
+        </p>
         <ul className="list-disc list-inside mb-6">
           <li>Name and contact details (email, phone number)</li>
           <li>Account ID and profile information</li>
@@ -28,10 +35,32 @@ export default function DeleteAccount() {
         </ul>
 
         <p className="mb-4">
-          ⚠️ Please note: VoltGo does <strong>not</strong> support partial deletion of data (e.g., deleting only certain messages or photos).
-          The only available option is <strong>full account deletion</strong>.
+          ⚠️ Please note: VoltGo does <strong>not</strong> support partial
+          deletion of data (e.g., deleting only certain messages or photos). The
+          only available option is <strong>full account deletion</strong>.
         </p>
 
         <p className="mb-2">
           Your request will be processed in accordance with our{" "}
-          <a href="https://voltgo.us/pri
+          <a
+            href="https://voltgo.us/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            Privacy Policy
+          </a>
+          .
+        </p>
+
+        <p className="font-semibold text-center">
+          Please allow up to 7 business days for confirmation.
+        </p>
+
+        <div className="text-center text-sm text-gray-500 mt-6">
+          &copy; {new Date().getFullYear()} VoltGo. All rights reserved.
+        </div>
+      </div>
+    </div>
+  );
+}

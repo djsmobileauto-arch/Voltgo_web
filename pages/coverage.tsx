@@ -77,7 +77,7 @@ export default function Coverage() {
           key={mapKey}
           mapContainerStyle={{ width: '100%', height: '500px' }}
           center={center}
-          zoom={10}
+          zoom={7}
           options={{
             disableDefaultUI: false,
             zoomControl: true,

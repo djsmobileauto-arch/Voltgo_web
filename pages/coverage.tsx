@@ -3,17 +3,17 @@
 import { GoogleMap, LoadScript, Circle } from '@react-google-maps/api';
 
 export default function Coverage() {
-  // Center: Wallingford, CT
+  // Wallingford, CT
   const center = { lat: 41.4576, lng: -72.8231 };
 
-  // Experimento 1: Wallingford -> Fairfield (aprox). (ajustable)
-  const radiusMeters = 30000; // 30 km ≈ 18.7 miles
+  // Ejemplo: 32.3 miles ≈ 52,000 meters
+  const radiusMeters = 52000;
 
   const circleOptions = {
-    strokeColor: '#FF0000',
+    strokeColor: '#00FF00',
     strokeOpacity: 0.8,
     strokeWeight: 2,
-    fillColor: '#FF0000',
+    fillColor: '#00FF00',
     fillOpacity: 0.2,
   };
 

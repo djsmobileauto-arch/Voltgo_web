@@ -7,7 +7,7 @@ export default function Coverage() {
   const center = { lat: 41.4576, lng: -72.8231 };
 
   // Ejemplo: 32.3 miles ≈ 52,000 meters
-  const radiusMeters = 52000;
+  const radiusMeters = 10000;
 
   const circleOptions = {
     strokeColor: '#00FF00',

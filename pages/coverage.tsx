@@ -7,7 +7,7 @@ export default function Coverage() {
   const center = { lat: 41.4576, lng: -72.8231 };
 
   // Experimento 1: Wallingford -> Fairfield (aprox). (ajustable)
-  const radiusMeters = 52000; // 52 km ≈ 32.3 miles
+  const radiusMeters = 30000; // 30 km ≈ 18.7 miles
 
   const circleOptions = {
     strokeColor: '#FF0000',

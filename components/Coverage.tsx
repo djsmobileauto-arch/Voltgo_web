@@ -24,7 +24,7 @@ export default function Coverage() {
           >
             <Circle
               center={center}
-              radius={45000} // ~27.97 millas en metros
+              radius={49000} // ~30.45 millas en metros
               options={{
                 strokeColor: '#00ff00',
                 strokeOpacity: 0.8,

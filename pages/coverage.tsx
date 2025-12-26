@@ -1,10 +1,13 @@
-
 'use client';
 
 import { GoogleMap, LoadScript, Circle } from '@react-google-maps/api';
 
 export default function Coverage() {
-  const center = { lat: 41.4576, lng: -72.8231 }; // Wallingford, CT
+  // Center: Wallingford, CT
+  const center = { lat: 41.4576, lng: -72.8231 };
+
+  // Experimento 1: Wallingford -> Fairfield (aprox). (ajustable)
+  const radiusMeters = 52000; // 52 km ≈ 32.3 miles
 
   const circleOptions = {
     strokeColor: '#FF0000',
@@ -21,7 +24,7 @@ export default function Coverage() {
         center={center}
         zoom={9}
       >
-        <Circle center={center} radius={72420} options={circleOptions} />
+        <Circle center={center} radius={radiusMeters} options={circleOptions} />
       </GoogleMap>
     </LoadScript>
   );

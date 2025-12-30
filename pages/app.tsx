@@ -1,4 +1,14 @@
 export default function AppPage() {
+  // ✅ Official store links
+  const googlePlayUrl =
+    "https://play.google.com/store/apps/details?id=us.voltgoUser.appc";
+
+  const appStoreUrl =
+    "https://apps.apple.com/us/app/myvoltgo/id6752673954";
+
+  // ✅ Your call CTA
+  const phoneNumberTel = "tel:18334658646";
+
   return (
     <section className="bg-blue-700 py-20 text-center min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
@@ -11,16 +21,18 @@ export default function AppPage() {
         </p>
 
         <p className="text-md text-white mb-10">
-          Coming soon to iOS and Android.
+          Available now on iOS and Android.
         </p>
 
-        {/* Botones oficiales */}
-        <div className="flex justify-center gap-4">
+        {/* Official store buttons */}
+        <div className="flex justify-center gap-4 flex-wrap">
           {/* Google Play */}
           <a
-            href="#"
+            href={googlePlayUrl}
             className="inline-block"
-            aria-label="Download on Google Play"
+            aria-label="Get it on Google Play"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
@@ -31,9 +43,11 @@ export default function AppPage() {
 
           {/* App Store */}
           <a
-            href="#"
+            href={appStoreUrl}
             className="inline-block"
             aria-label="Download on the App Store"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -43,11 +57,11 @@ export default function AppPage() {
           </a>
         </div>
 
-        {/* Botón de llamada */}
+        {/* Call button */}
         <div className="mt-8">
           <a
-            href="tel:18334658646"
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold"
+            href={phoneNumberTel}
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold inline-block"
           >
             Call 1-833-4-VOLTGO
           </a>

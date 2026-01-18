@@ -38,11 +38,13 @@ export default function Footer() {
 
       {/* Copyright compacto */}
       <div className="mt-1 text-center text-xs space-y-0.5">
-        <p>© 2025 VoltGo. All rights reserved.</p>
-        <p>
-          VoltGo is the commercial brand powered by DJ’S Mobile Auto Solutions LLC – 
-          Wallingford, CT – D-U-N-S: 136807153.
-        </p>
+        <p>© 2025–2026 VoltGo. All rights reserved.</p>
+
+<p>
+  VoltGo™ is the commercial brand powered by DJ’S Mobile Auto Solutions LLC –
+  Wallingford, CT – D-U-N-S: 136807153.
+</p>
+
       </div>
     </footer>
   )

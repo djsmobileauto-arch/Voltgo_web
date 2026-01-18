@@ -65,9 +65,10 @@ export default function Footer() {
           </h4>
           <ul className="space-y-0.5 text-xs">
             <li>
-              <a href="/apps/myvoltgo" className="hover:text-yellow-400">
-                MyVoltGo
-              </a>
+             <a href="/app" className="hover:text-yellow-400">
+  MyVoltGo
+</a>
+
             </li>
           </ul>
         </div>

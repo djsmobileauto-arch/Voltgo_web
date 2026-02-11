@@ -30,13 +30,23 @@ export default function Pricing() {
           <p>24/7 coverage</p>
         </div>
 
-        {/* EV Charging */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-bold text-blue-700 mb-4">EV Charging (One-Time)</h2>
+        {/* Roadside DC Energy Recovery (One-Time) */}
 
-          <h3 className="text-lg font-semibold text-blue-600">Emergency Rescue</h3>
+        <div className="bg-white rounded-lg shadow-lg p-6">
+         <h2 className="text-xl font-bold text-blue-700 mb-4">
+  Roadside DC Energy Recovery (One-Time)
+</h2>
+
+
+        <h3 className="text-lg font-semibold text-blue-600">
+  Emergency Roadside Energy Recovery
+</h3>
+
           <p className="mb-2">$199</p>
-          <p>20 kWh delivered (~25 miles of range)</p>
+         <p>
+  Emergency roadside energy delivery (not routine EV charging)
+</p>
+
           <p className="text-sm text-gray-500">Surcharges may apply: cold, peak, overnight</p>
 
           <h3 className="text-lg font-semibold text-blue-600 mt-6">On-Demand (Scheduled)</h3>

@@ -2,7 +2,8 @@ import React from "react";
 
 export default function SubscribePage() {
   return (
-    <div className="min-h-screen bg-blue-600 py-12 px-4 sm:px-6 lg:px-8">
+  <div className="min-h-screen bg-blue-700 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+ 
       <h1 className="text-3xl font-bold text-center text-white mb-8">
         VoltGo Subscriptions
       </h1>

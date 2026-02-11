@@ -1,6 +1,7 @@
 export default function Pricing() {
   return (
-    <div className="bg-blue-600 min-h-screen py-16 px-6">
+  <div className="bg-blue-700 min-h-screen pt-24 pb-12 px-6">
+
       <h1 className="text-3xl font-bold text-white text-center mb-12">
         Simple, Transparent Pricing
       </h1>

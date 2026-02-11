@@ -7,59 +7,58 @@ export default function About() {
       <div
         className="max-w-4xl w-full p-10 text-black shadow-2xl"
         style={{
-          backgroundColor: "#fffdf5", // blanco tipo pergamino
+          backgroundColor: '#fffdf5', // blanco tipo pergamino
           backgroundImage:
             "url('https://www.transparenttextures.com/patterns/parchment.png')",
-          backgroundSize: "cover",
-          border: "3px solid #d4af37", // borde dorado
-          borderRadius: "15px",
+          backgroundSize: 'cover',
+          border: '3px solid #d4af37', // borde dorado
+          borderRadius: '15px',
         }}
       >
         {/* Título */}
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-900">
           About VoltGo
         </h1>
+
         <p className="text-center text-lg mb-10 text-gray-700 italic">
-          Driving Innovation in Roadside Assistance & EV Charging
+          Roadside mobility solutions, delivered where and when they are needed.
         </p>
 
-        {/* Secciones */}
+        {/* Our Mission */}
         <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
         <p className="mb-8">
-          VoltGo, powered by DJ’S Mobile Auto Solutions LLC, was created with one
-          purpose: to redefine the way drivers access roadside assistance and
-          energy. We combine over a decade of experience in mobile automotive
-          solutions with cutting-edge EV fast charging technology, delivering a
-          service that is both reliable for customers and scalable for partners
-          and investors.
+          VoltGo is a roadside assistance platform focused on restoring vehicle
+          mobility during unexpected roadside events. Our mission is to provide
+          on-site solutions that help drivers safely continue their journey
+          without unnecessary towing or prolonged immobilization.
         </p>
 
+        {/* Our Value Proposition */}
         <h2 className="text-2xl font-semibold mb-4">Our Value Proposition</h2>
         <ul className="list-disc list-inside space-y-2 mb-8">
           <li>
-            ⚡ Mobile DC Fast Charging – Up to 65 kWh delivered on-site, giving EV
-            drivers up to 60 miles of range in less than an hour.
+            On-site, event-based roadside interventions focused on mobility
+            recovery
           </li>
           <li>
-            🔋 Full Roadside Assistance – Battery replacements, jump starts, tire
-            services, lockouts, and more.
+            Supervised service execution by trained and authorized personnel
           </li>
           <li>
-            🌍 Smart Coverage – Serving Connecticut with scalable expansion plans
-            to surrounding states.
+            Support for electric and conventional vehicles where fixed
+            infrastructure is unavailable or impractical
           </li>
           <li>
-            🤝 B2C & B2B – Tailored solutions for individual drivers, fleets, and
-            corporate partners.
+            Operational clarity aligned with roadside assistance and insurance
+            frameworks
           </li>
         </ul>
 
+        {/* Our Vision */}
         <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
         <p>
-          VoltGo is more than a service—it’s the future of roadside assistance.
-          We aim to become a recognized leader in mobile EV charging and
-          automotive support, ensuring no driver is left stranded, whether
-          they’re commuting locally or traveling cross-state.
+          We envision a roadside assistance ecosystem where mobility recovery is
+          faster, more efficient, and better adapted to modern vehicles—without
+          overreliance on towing or fixed infrastructure.
         </p>
       </div>
     </div>

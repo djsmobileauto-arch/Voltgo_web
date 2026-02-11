@@ -7,8 +7,10 @@ export default function ContactPage() {
         <title>Contact – VoltGo</title>
       </Head>
 
-      <section className="bg-volt-blue text-white">
-        <div className="max-w-7xl mx-auto px-6 py-12">
+     <section className="bg-blue-700 text-white">
+
+      <div className="max-w-7xl mx-auto px-6 pt-24 pb-12">
+ 
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-2">Contact</h1>
           <p className="opacity-90">
             Questions about service, coverage or partnerships? We&apos;re here to help.

@@ -24,42 +24,28 @@ export default function About() {
           Roadside mobility solutions, delivered where and when they are needed.
         </p>
 
-        {/* Our Mission */}
-        <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-        <p className="mb-8">
-          VoltGo is a roadside assistance platform focused on restoring vehicle
-          mobility during unexpected roadside events. Our mission is to provide
-          on-site solutions that help drivers safely continue their journey
-          without unnecessary towing or prolonged immobilization.
-        </p>
+        {/* About Copy (tu texto) */}
+        <div className="space-y-5 text-gray-900 leading-relaxed">
+          <p>
+            VoltGo is a roadside assistance platform focused on restoring vehicle
+            mobility during unexpected roadside events. Our services are designed
+            to provide on-site solutions that help drivers safely continue their
+            journey without unnecessary towing or prolonged immobilization.
+          </p>
 
-        {/* Our Value Proposition */}
-        <h2 className="text-2xl font-semibold mb-4">Our Value Proposition</h2>
-        <ul className="list-disc list-inside space-y-2 mb-8">
-          <li>
-            On-site, event-based roadside interventions focused on mobility
-            recovery
-          </li>
-          <li>
-            Supervised service execution by trained and authorized personnel
-          </li>
-          <li>
-            Support for electric and conventional vehicles where fixed
-            infrastructure is unavailable or impractical
-          </li>
-          <li>
-            Operational clarity aligned with roadside assistance and insurance
-            frameworks
-          </li>
-        </ul>
+          <p>
+            Powered by DJ’S Mobile Auto Solutions LLC, VoltGo operates through a
+            supervised, event-based service model, delivering practical roadside
+            support for electric and conventional vehicles where fixed
+            infrastructure is unavailable or impractical.
+          </p>
 
-        {/* Our Vision */}
-        <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
-        <p>
-          We envision a roadside assistance ecosystem where mobility recovery is
-          faster, more efficient, and better adapted to modern vehicles—without
-          overreliance on towing or fixed infrastructure.
-        </p>
+          <p>
+            VoltGo combines field experience, operational discipline, and modern
+            mobility solutions to address real-world roadside needs—efficiently,
+            responsibly, and without overpromising.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -36,22 +36,26 @@ export default function Services() {
         {/* EV Charging */}
         <div className="bg-white rounded-lg shadow-lg p-6 text-center">
           <h3 className="text-xl font-semibold text-blue-700 mb-4">
-            EV Charging
-          </h3>
+  Roadside DC Energy Recovery
+</h3>
+
           <p className="text-gray-700 mb-4">
-            On-demand mobile DC fast charging delivered wherever your EV is
-            stranded. Avoid the stress of range anxiety.
-          </p>
+  Roadside DC energy delivery designed to restore mobility when your EV is stranded
+  outside charging coverage. Not routine EV charging — this is emergency energy recovery.
+</p>
+
           <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2 text-left">
-            <li>Emergency Rescue: 20 kWh (~25 miles of range)</li>
-            <li>Scheduled charges: 20, 30, or 40 kWh options</li>
-            <li>Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</li>
+            <li>Emergency Energy Recovery: 20 kWh (~25 miles of range)</li>
+<li>Scheduled Energy Delivery (24h notice): 20, 30, or 40 kWh options</li>
+<li>Supported connectors: CCS1, CHAdeMO, NACS (Tesla)</li>
+
           </ul>
           <a
             href="/schedule"
             className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded"
           >
-            Schedule a Charge
+           Schedule Energy Delivery
+
           </a>
         </div>
 

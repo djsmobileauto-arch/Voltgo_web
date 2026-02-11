@@ -40,9 +40,12 @@ export default function Services() {
 </h3>
 
           <p className="text-gray-700 mb-4">
-  Roadside DC energy delivery designed to restore mobility when your EV is stranded
-  outside charging coverage. Not routine EV charging — this is emergency energy recovery.
+  Roadside DC energy delivery designed to restore vehicle mobility during unexpected roadside energy depletion.
+  VoltGo delivers on-site, high-power DC energy to enable safe continuation of travel when fixed charging
+  infrastructure is unavailable or impractical. This service is purpose-built for time-sensitive roadside
+  situations requiring immediate mobility restoration.
 </p>
+
 
           <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2 text-left">
             <li>Emergency Energy Recovery: 20 kWh (~25 miles of range)</li>
